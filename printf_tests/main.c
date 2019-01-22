@@ -6,7 +6,7 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 13:25:22 by pscott            #+#    #+#             */
-/*   Updated: 2018/12/02 17:57:08 by pscott           ###   ########.fr       */
+/*   Updated: 2019/01/22 18:33:36 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(void)
 		return (1);
 	init_info(info);
 	print_header();
-	signal_launcher(info);
+	conversions_launcher(info);
 	print_score(info->err, info->total);
 	ret = info->err ? -1 : 0;
 	if (info)
