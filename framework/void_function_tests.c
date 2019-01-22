@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 13:54:00 by abarthel          #+#    #+#             */
-/*   Updated: 2018/12/02 20:52:11 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/22 16:47:16 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		void_char_test(int len, void (*f)(char), char input)
 	{
 		wait(&stat);
 		read(fd[0], buffer, len);
-		if (!(fw_strncmp(buffer, &input, len)))
+		if (!(strncmp(buffer, &input, len)))
 			return (0);
 		else
 			return (-1);
@@ -59,7 +59,7 @@ int		void_str_test(int len, void (*f)(const char*), char *input)
 	{
 		wait(&stat);
 		read(fd[0], buffer, len);
-		if (!(fw_strncmp(buffer, input, len)))
+		if (!(strncmp(buffer, input, len)))
 			return (0);
 		else
 			return (-1);
@@ -86,7 +86,7 @@ int		void_itoa_test(int len, void (*f)(int), int input, char *output)
 	{
 		wait(&stat);
 		read(fd[0], buffer, len);
-		if (!(fw_strncmp(buffer, output, len)))
+		if (!(strncmp(buffer, output, len)))
 			return (0);
 		else
 			return (-1);
