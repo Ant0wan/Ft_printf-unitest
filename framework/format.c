@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:28:19 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/22 16:43:58 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/22 16:48:55 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ void		print_result(int stat, int expected)
 void		print_score(int err, int total)
 {
 	puts("\nScore: ");
-	printf("%s", total - err);
+	printf("%d", total - err);
 	putchar('/');
-	printf("%s", total);
+	printf("%d", total);
 	puts(" valid tests.\n");
 }
 
