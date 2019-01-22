@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:28:19 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/22 16:58:13 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/22 17:27:51 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,33 +36,33 @@ void		print_header(void)
 void		print_result(int stat, int expected)
 {
 	if (stat == expected)
-		puts("\033[32m[OK]\033[0m");
+		printf("\033[32m[OK]\033[0m\n");
 	else if (stat == 1 || stat == 0)
-		puts("\033[31m[KO]\033[0m");
+		printf("\033[31m[KO]\033[0m\n");
 	else if (stat == 11)
-		puts("\033[31m[SEGV]\033[0m");
+		printf("\033[31m[SEGV]\033[0m\n");
 	else if (stat == 10)
-		puts("\033[31m[BUSE]\033[0m");
+		printf("\033[31m[BUSE]\033[0m\n");
 	else if (stat == -2)
-		puts("Error from our side.");
+		printf("Error from our side.\n");
 	else if (stat == 14)
-		puts("\033[31m[TIMEOUT]\033[0m");
+		printf("\033[31m[TIMEOUT]\033[0m\n");
 	else
-		puts("Exit not caught.");
+		printf("Exit not caught.\n");
 }
 
 void		print_score(int err, int total)
 {
-	puts("\nScore: ");
+	printf("\nScore: ");
 	printf("%d", total - err);
-	putchar('/');
+	printf("/");
 	printf("%d", total);
-	puts(" valid tests.\n");
+	printf(" valid tests.\n");
 }
 
 void		print_test(char *name)
 {
-	puts("\t> ");
-	puts(name);
-	puts("\t:\t");
+	write(1, "\t> ", 3);
+	write(1, name, strlen(name));
+	write(1, "\t:\t", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 14:56:16 by pscott            #+#    #+#             */
-/*   Updated: 2018/12/02 18:25:00 by pscott           ###   ########.fr       */
+/*   Updated: 2019/01/22 17:22:18 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int			launch_test(t_unit_test **testlist, t_err_info *info)
 		if (tmp)
 			free(tmp);
 	}
-	print_test((*testlist)->name);
+	print_test((*testlist)->name);	
 	ret = process_launch((*testlist)->f);
 	if (ret != (*testlist)->expected)
 		info->err++;
