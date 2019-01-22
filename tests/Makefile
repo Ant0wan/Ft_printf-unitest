@@ -6,7 +6,7 @@
 #    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 18:02:03 by pscott            #+#    #+#              #
-#    Updated: 2018/12/02 22:36:54 by pscott           ###   ########.fr        #
+#    Updated: 2019/01/22 17:03:22 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,7 @@ FRAMEWORK_PATH = ../framework
 LIB_UNIT_DIR = ../framework
 LIB_UNIT = -L $(LIB_UNIT_DIR) -lunit
 
-LIB_FW_DIR = $(FRAMEWORK_PATH)/libfw
-LIB_FW = -L $(LIB_FW_DIR) -lfw
-
-INCLUDES = -I $(FRAMEWORK_PATH)/includes
+INCLUDES = -I $(FRAMEWORK_PATH)
 SRCS = $(shell find . -type f -name "*.c")
 
 OBJS= $(SRCS:.c=.o)
@@ -31,10 +28,10 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@make -C $(LIB_UNIT_DIR)
-	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) -o $(NAME) $(OBJS)
+	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) -o $(NAME) $(OBJS)
 
 test: $(NAME)
-	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) -o $(NAME) $(OBJS)
+	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) -o $(NAME) $(OBJS)
 	@./$(NAME) || true
 
 %.o: %.c
@@ -52,4 +49,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: fclean all clean
+.PHONY: fclean all clean re
