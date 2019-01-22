@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:28:19 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/22 17:47:20 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/22 18:51:10 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void		print_header(void)
 	puts(" ");
 	puts("\033[0m     version:     \033[93mv1.0-stdio\033[0m");
 	puts("     author:      \033[93mabarthel\033[0m");
+	puts("                  \033[93mjkettani\033[0m");
 	puts("     contributor: \033[93mpscott\033[0m");
 	puts("                  \033[93malesteph\033[0m");
 	puts("");
