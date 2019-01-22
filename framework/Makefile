@@ -3,47 +3,42 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/12/01 18:44:30 by pscott            #+#    #+#              #
-#    Updated: 2018/12/02 17:56:59 by abarthel         ###   ########.fr        #
+#    Created: 2019/01/22 16:55:38 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/22 16:57:13 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME:= libunit.a
+NAME			=	libunit.a
 
-FLAGS:= -Wall -Werror -Wextra
+FLAGS			= 	-Wall -Werror -Wextra
 
-FRAMEWORK_PATH:= .
+FRAMEWORK_PATH	=	.
 
-LIB_FW:= -L $(FRAMEWORK_PATH)/libfw -lfw
-LIB_FW_DIR = $(FRAMEWORK_PATH)/libfw
+INCLUDES		=	-I $(FRAMEWORK_PATH)
 
-INCLUDES:= -I $(FRAMEWORK_PATH)/includes
+SRC				=	framework.c format.c processes.c init.c void_function_tests.c
 
-SRC := framework.c format.c processes.c init.c void_function_tests.c
-SRCS := $(addprefix $(FRAMEWORK_PATH)/, $(SRC))
+SRCS			=	$(addprefix $(FRAMEWORK_PATH)/, $(SRC))
 
-OBJS:= $(SRCS:.c=.o)
+OBJS			=	$(SRCS:.c=.o)
 
-all: $(NAME)
-	@make -C $(LIB_FW_DIR)
+all				:	$(NAME)
 
-$(NAME): $(OBJS)
+$(NAME)			:	$(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-%.o: %.c
+%.o				:	%.c
 	gcc $(FLAGS) $(INCLUDES) -o $@ -c $<
 
-clean:
+clean			:
 	rm -f $(OBJS)
-	make -C $(LIB_FW_DIR) clean
 
-fclean: clean
+fclean			:	clean
 	rm -f $(NAME)
-	make -C $(LIB_FW_DIR) fclean
 
-re: fclean all
+re				:	fclean all
 
-.PHONY: clean
+.PHONY			:	all clean fclean re
