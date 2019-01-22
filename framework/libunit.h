@@ -6,7 +6,7 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 18:14:47 by pscott            #+#    #+#             */
-/*   Updated: 2019/01/22 16:46:02 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/22 18:58:34 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <stdio.h>
 # include <sys/wait.h>
+# include <stdarg.h>
 
 # define TIMEOUT 6
 
