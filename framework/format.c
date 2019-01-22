@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:28:19 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/22 17:39:17 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/22 17:47:20 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ void		print_header(void)
 	puts("  |  ____/ ___) |  _ (_   _|_   __|_____) |   | |  _ \\| (_   _) ___ |/___|_   _) ");
 	puts("  | |   | |   | | | | || |_  | |        | |___| | | | | | | |_| ____|___ | | |_ ");
 	puts("  |_|   |_|   |_|_| |_| \\__) |_|         \\_____/|_| |_|_|  \\__)_____|___/   \\__)");	                                                                                
-	puts("\033[0m                     version: \033[93mv1.0-stdio\033[0m  authors: \033[93mabarthel\033[0m  contributor: \033[93mpscott\033[0m");
+	puts(" ");
+	puts("\033[0m     version:     \033[93mv1.0-stdio\033[0m");
+	puts("     author:      \033[93mabarthel\033[0m");
+	puts("     contributor: \033[93mpscott\033[0m");
+	puts("                  \033[93malesteph\033[0m");
 	puts("");
 }
 
