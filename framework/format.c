@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:28:19 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/22 16:48:55 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/22 16:58:13 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,9 @@ void		print_header(void)
 	puts("     ###   ########.fr");
 	puts("    \\___/_|  _|_|\\__|   _|\\___|____/\\__|");
 	puts("");
-	puts("\033[0m     version: \033[36mv0.1");
+	puts("\033[0m     version: \033[36mv1.0-stdio");
 	puts("\033[0m     authors: \033[36mabarthel\033[0m, ");
-	puts("\033[36mpscott\033[0m, ");
-	puts("\033[36malesteph\033[0m");
+	puts("\033[0 contributors: \033[36mpscott\033[0m ");
 	puts("");
 	puts("");
 }
