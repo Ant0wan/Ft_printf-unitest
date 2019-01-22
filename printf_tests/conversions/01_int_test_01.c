@@ -1,37 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_basic_test.c                                    :+:      :+:    :+:   */
+/*   01_int_test_01.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/02 10:13:54 by pscott            #+#    #+#             */
-/*   Updated: 2018/12/02 16:14:16 by pscott           ###   ########.fr       */
+/*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
+/*   Updated: 2019/01/22 18:02:20 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "libunit.h"
 
-int	strjoin_basic(void)
+int	int_test_01(void)
 {
-	char *s1;
-	char *s2;
-	char *res;
-
-	s1 = "This is a test";
-	s2 = ", and this test is valid!";
-	res = ft_strjoin(s1, s2);
-	if (fw_strcmp(res, "This is a test, and this test is valid!") == 0)
-	{
-		if (res)
-			free(res);
+	if ((1))
 		return (0);
-	}
 	else
-	{
-		if (res)
-			free(res);
 		return (-1);
-	}
 }

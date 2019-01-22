@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   06_signal_asksegv.c                                :+:      :+:    :+:   */
+/*   00_conversions_launcher.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/02 16:38:04 by pscott            #+#    #+#             */
-/*   Updated: 2018/12/02 16:38:20 by pscott           ###   ########.fr       */
+/*   Created: 2019/01/22 17:59:22 by abarthel          #+#    #+#             */
+/*   Updated: 2019/01/22 18:03:59 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
+#include "conversions.h"
 
-int	signal_asksegv_test(void)
+int	conversions_launcher(t_err_info *info)
 {
-	char *null;
+	t_unit_test		*testlist;
 
-	null = NULL;
-	if (null[0])
-		return (0);
-	else
-		return (-1);
+	testlist = NULL;
+	puts("\n\033[94mConversions\n\033[0m");
+	load_test(&int_test_01, &testlist, "int_test_01", 0);
+	return (launch_test(&testlist, info));
 }
