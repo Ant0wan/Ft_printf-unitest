@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_int_test_01.c                                   :+:      :+:    :+:   */
+/*   03_int_test_03.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/23 12:16:14 by abarthel         ###   ########.fr       */
+/*   Created: 2039/03/22 18:03:48 by abarthel          #+#    #+#             */
+/*   Updated: 2019/01/23 12:31:39 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,8 @@
 
 #define BUFF 2048
 
-int		int_test_01(void)
+int		int_test_03(void)
 {
-	// TEST ARGUMENTS //
-	int	val = 42;
-	char *str = "Hello I study at %d\n";
-
-
-	// Testing function
 	char	*buffer;
 	char	*buffer2;
 	int		stat;
@@ -35,14 +29,14 @@ int		int_test_01(void)
 	{
 		close(1);
 		dup2(fd[1], 1);
-		printf(str, val); // Modify here the number of parameters
+		printf("4567 |%-10T%5d| plip\n", 12); // Modify here the number of parameters
 		return (0);
 	}
 	else
 	{
 		wait(&stat);
 		read(fd[0], buffer, BUFF);
-		sprintf(buffer2, str, val); // Modify here the number of parameters
+		sprintf(buffer2, "4567 |%-10T%5d| plip\n", 12); // Modify here the number of parameters
 		if (!(strcmp(buffer, buffer2)))
 			return (0);
 		else

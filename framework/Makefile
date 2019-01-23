@@ -6,13 +6,13 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 16:55:38 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/22 19:33:43 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/23 12:38:13 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	libunit.a
 
-FLAGS			= 	-Wall -Werror -Wextra
+#FLAGS			= 	-Wall -Werror -Wextra
 
 FRAMEWORK_PATH	=	.
 
@@ -31,7 +31,8 @@ $(NAME)			:	$(OBJS)
 	@ranlib $(NAME)
 
 %.o				:	%.c
-	@gcc $(FLAGS) $(INCLUDES) -o $@ -c $<
+	@gcc $(INCLUDES) -o $@ -c $<
+#	@gcc $(FLAGS) $(INCLUDES) -o $@ -c $<
 
 clean			:
 	@rm -f $(OBJS)
