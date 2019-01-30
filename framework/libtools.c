@@ -6,11 +6,14 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 19:31:23 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/22 19:34:00 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/30 12:38:57 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
+
+#include <stdlib.h>
+#include <strings.h>
 
 static void	*ft_memalloc(size_t size)
 {

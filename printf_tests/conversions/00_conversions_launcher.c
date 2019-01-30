@@ -6,12 +6,14 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 17:59:22 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/23 12:42:45 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/30 12:41:31 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "conversions.h"
+
+#include <stdio.h>
 
 int	conversions_launcher(t_err_info *info)
 {

@@ -6,11 +6,21 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:28:19 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/22 18:51:10 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/30 12:34:28 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
+
+#include <unistd.h>
+#include <stdio.h>
+#include <signal.h>
+#include <strings.h>
+
+#define RET_ERROR0		0
+#define RET_ERROR1		1
+#define RET_CRASHFRAME -2
+
 
 void		print_header(void)
 {
@@ -34,15 +44,15 @@ void		print_result(int stat, int expected)
 {
 	if (stat == expected)
 		printf("\033[32m[OK]\033[0m\n");
-	else if (stat == 1 || stat == 0)
+	else if (stat == RET_ERROR0 || stat == RET_ERROR1)
 		printf("\033[31m[KO]\033[0m\n");
-	else if (stat == 11)
+	else if (stat == SIGSEGV)
 		printf("\033[31m[SEGV]\033[0m\n");
-	else if (stat == 10)
+	else if (stat == SIGBUS)
 		printf("\033[31m[BUSE]\033[0m\n");
-	else if (stat == -2)
+	else if (stat == RET_CRASHFRAME)
 		printf("Error from our side.\n");
-	else if (stat == 14)
+	else if (stat == SIGALRM)
 		printf("\033[31m[TIMEOUT]\033[0m\n");
 	else
 		printf("Exit not caught.\n");

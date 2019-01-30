@@ -6,11 +6,15 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2029/02/22 18:02:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/23 12:29:09 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/30 12:44:57 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
+
+#include <unistd.h>
+#include <stdio.h>
+#include <strings.h>
 
 #define BUFF 2048
 

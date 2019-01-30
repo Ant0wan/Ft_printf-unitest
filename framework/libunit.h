@@ -6,22 +6,14 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 18:14:47 by pscott            #+#    #+#             */
-/*   Updated: 2019/01/23 12:15:52 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/30 12:33:00 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBUNIT_H
 # define LIBUNIT_H
 
-# include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
-# include <stdio.h>
-# include <sys/wait.h>
-# include <stdarg.h>
-# include <limits.h>
-
-# define TIMEOUT 6
 
 typedef struct			s_unit_test
 {

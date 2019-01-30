@@ -6,11 +6,13 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 13:54:00 by abarthel          #+#    #+#             */
-/*   Updated: 2019/01/22 19:22:12 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/01/30 12:39:51 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include <strings.h>
+#include <unistd.h>
+#include <sys/wait.h>
 
 int		void_char_test(int len, void (*f)(char), char input)
 {
