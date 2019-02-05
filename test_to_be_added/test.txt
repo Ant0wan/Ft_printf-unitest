@@ -1,0 +1,10 @@
+
+
+
+Fornat of the test:
+TESTNB	ARG	OUTPUT
+|
+|-> Test01
+
+Sample:
+	"%s\n", 'a' = SEGV
