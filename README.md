@@ -11,7 +11,8 @@ Still to be made:
 
 
 Recently be done:
-- added macro in testings for eseay replacing
+- added templates
+- added macro in testings for easy replacing
 - void function for testing printf
 - added few tests made be not at the right place (conversions)
 - testing function template for printf testing
