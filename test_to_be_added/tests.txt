@@ -1,2 +1,2 @@
-FOLDER               TYPE          NAME               ARG
-conversions
+FOLDER	TYPE	NAME	ARG
+conversions	int	printeasy	"%d\n", 42
