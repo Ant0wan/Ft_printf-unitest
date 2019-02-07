@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 16:55:38 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/23 12:38:13 by abarthel         ###   ########.fr        #
+#    Updated: 2019/02/07 17:48:16 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,4 +42,4 @@ fclean			:	clean
 
 re				:	fclean all
 
-.PHONY			:	all clean fclean re
+.PHONY:	all clean fclean re

@@ -11,6 +11,8 @@ Still to be made:
 
 
 Recently be done:
+- added macro in testings for eseay replacing
+- void function for testing printf
 - added few tests made be not at the right place (conversions)
 - testing function template for printf testing
 - framework using stdio.h
