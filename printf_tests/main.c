@@ -6,7 +6,7 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 13:25:22 by pscott            #+#    #+#             */
-/*   Updated: 2019/01/22 18:33:36 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/07 18:30:47 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int	main(void)
 		return (1);
 	init_info(info);
 	print_header();
+/* BOCALLS */
 	conversions_launcher(info);
+/* EOFCALLS */
 	print_score(info->err, info->total);
 	ret = info->err ? -1 : 0;
 	if (info)
