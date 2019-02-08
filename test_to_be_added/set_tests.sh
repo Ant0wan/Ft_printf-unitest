@@ -69,3 +69,21 @@ done
 
 #For putting tests:
 #sed -i.bak "s/XXX/\"Hello dude%d\", 42/g" KK_TYPE_NAME.C && rm *.bak
+
+FOLDERS_TEST=()
+IFS=$'\n'       # make newlines the only separator
+set -f          # disable globbing
+i=0
+for q in $(cat < "tests.txt"); do
+#	FOLDERS_TEST[$i]+="$(echo $($q | cut -d \t -f1))"
+	FOLDERS_TEST[$i]="$q"
+	echo $i
+	echo "${FOLDERS_TEST[$i]}"
+	((i++))
+done
+
+
+
+
+
+
