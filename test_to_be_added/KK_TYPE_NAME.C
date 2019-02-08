@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/07 17:55:27 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/08 15:45:01 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <strings.h>
 
-#define ARG_TEST Hello dude
+#define ARG_TEST "Hello dude%d", 42
 
 int		TYPE_NAME(void)
 {

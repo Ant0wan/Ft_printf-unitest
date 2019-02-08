@@ -11,6 +11,16 @@
 #                                                                              #
 # **************************************************************************** #
 
+#
+# PROCHAIN SCRIPTS IN PYTHON FOR TESTINGS
+#
+
+'''
+Format of input in tests.txt file:
+    FOLDER  TYPE    NAME    ARG
+ex: conversions int printeasy   "%d\n", 42
+'''
+
 import os, errno
 
 path = os.getcwd()

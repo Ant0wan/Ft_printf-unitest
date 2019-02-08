@@ -65,3 +65,7 @@ do
 		index_type=$(echo "$index_type + 1" | bc)
 	done
 done
+
+
+#For putting tests:
+#sed -i.bak "s/XXX/\"Hello dude%d\", 42/g" KK_TYPE_NAME.C && rm *.bak
