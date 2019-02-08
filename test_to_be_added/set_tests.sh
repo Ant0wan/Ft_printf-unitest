@@ -43,7 +43,6 @@ for f in "${FOLDER[@]}"
 do
 	index_type=0
 	nb=0
-	echo "$printf_tests_repo$f" # Replace echo by mkdir
 	for t in ${TYPE[@]}
 	do
 ############################# BLOCK 1: INT ######################################
