@@ -16,6 +16,7 @@ declare printf_tests_repo="../printf_tests/"
 declare -a FOLDER=("conversions" "width" "flags")
 declare -a TYPE=("int" "long" "unisgnedint")
 
+
 #################################################################################
 ################# Declare names of the tests ####################################
 declare -a NAME_int=("oneint" "twoint" "nan" "overflow" "zero")
@@ -26,34 +27,39 @@ declare -a NAME_unsignedint=("oneunsignedint" "twounsignedint" "nan" "overflow" 
 #################################################################################
 ############## ALGO BUILDING THE FILES AND REPOS ################################
 declare index_type
+declare nb
 for f in "${FOLDER[@]}"
 do
 	index_type=0
+	nb=0
 	echo "$printf_tests_repo$f" # Replace echo by mkdir
 	for t in ${TYPE[@]}
 	do
 ############################# BLOCK 1: INT ######################################
-		if [ $index_type == 0 ]
+		if [ $index_type == 0 -a $f == ${FOLDER[0]} ]
 		then
 			for n in ${NAME_int[@]}
 			do
-				echo "cp XX_TYPE_NAME.c $printf_tests_repo$f/01_$t"_"$n.c" # Replace echo by cp
+				nb=$(echo "$nb + 1" | bc)
+				echo "cp XX_TYPE_NAME.c $printf_tests_repo$f/0$nb"_"$t"_"$n.c" # Replace echo by cp
 			done
 		fi
 ############################ BLOCK 2: LONG ######################################
-		if [ $index_type == 1 ]
+		if [ $index_type == 1 -a $f == ${FOLDER[0]} ]
 		then
 			for n in ${NAME_long[@]}
 			do
-				echo "cp XX_TYPE_NAME.c $printf_tests_repo$f/01_$t"_"$n.c" # Replace echo by cp
+				nb=$(echo "$nb + 1" | bc)
+				echo "cp XX_TYPE_NAME.c $printf_tests_repo$f/0$nb"_"$t"_"$n.c" # Replace echo by cp
 			done
 		fi
 ########################## BLOCK 3: UNSIGNED INT ################################
-		if [ $index_type == 2 ]
+		if [ $index_type == 2 -a $f == ${FOLDER[0]} ]
 		then
 			for n in ${NAME_unsignedint[@]}
 			do
-				echo "cp XX_TYPE_NAME.c $printf_tests_repo$f/01_$t"_"$n.c" # Replace echo by cp
+				nb=$(echo "$nb + 1" | bc)
+				echo "cp XX_TYPE_NAME.c $printf_tests_repo$f/0$nb"_"$t"_"$n.c" # Replace echo by cp
 			done
 		fi
 		index_type=$(echo "$index_type + 1" | bc)
