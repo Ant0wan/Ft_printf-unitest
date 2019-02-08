@@ -11,15 +11,39 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Script for building test functions and adding includes.
+#### Script for building test functions and adding includes. ####
+
+## Declare test repo path
 declare printf_tests_repo="../printf_tests/"
 
-# Build tests repo
+## Declare repos
 declare -a FOLDER=("conversions" "width" "flags")
 
-for i in "${FOLDER[@]}"
+## Declare types by repo
+declare -a TYPE=("int" "long" "unisgned int")
+
+## Declare names by types
+#int
+declare -a NAME_int=("oneint" "twoint" "nan" "overflow" "zero")
+#long
+declare -a NAME_long=("onelong" "twolong" "nan" "overflow" "zero")
+#unsigned int
+declare -a NAME_long=("oneunsignedint" "twounsignedint" "nan" "overflow" "zero")
+
+declare -a NAME
+
+
+for f in "${FOLDER[@]}"
 do
-	echo "$printf_tests_repo$i"
+	echo "$printf_tests_repo$f" # Replace echo by mkdir
+	for t in ${TYPE[@]}
+	do
+		NAME="NAME_"$t
+		for n in ${NAME[@]}
+		do
+			echo "cp XX_TYPE_NAME.c $printf_tests_repo$f/01_$t_$n" # Replace by cp
+		done
+	done
 done
 
 #cp XX_TYPE_NAME.c
