@@ -1,2 +1,3 @@
-FOLDER	TYPE	NAME	ARG
-conversions	int	printeasy	"%d\n", 42
+conversions;int;printeasy;"%d\n", 42
+conversions;int;printeasy;"%d, %d\n", 42, 21
+conversions;int;printeasy;"%d %s\n", 42, "Hello"
