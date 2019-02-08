@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 16:55:38 by abarthel          #+#    #+#              #
-#    Updated: 2019/02/07 17:48:16 by abarthel         ###   ########.fr        #
+#    Updated: 2019/02/08 16:02:09 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,22 +24,23 @@ SRCS			=	$(addprefix $(FRAMEWORK_PATH)/, $(SRC))
 
 OBJS			=	$(SRCS:.c=.o)
 
-all				:	$(NAME)
+all: $(NAME)
 
-$(NAME)			:	$(OBJS)
+$(NAME): $(OBJS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
+	@printf "\e[38;5;231mLi\e[38;5;230mbu\e[38;5;223mnit frammewo\e[38;5;230mrk\e[38;5;231m built\n\e[0m"
 
-%.o				:	%.c
-	@gcc $(INCLUDES) -o $@ -c $<
-#	@gcc $(FLAGS) $(INCLUDES) -o $@ -c $<
+%.o: %.c
+	@gcc $(FLAGS) $(INCLUDES) -o $@ -c $<
 
-clean			:
+
+clean:
 	@rm -f $(OBJS)
 
-fclean			:	clean
+fclean:	clean
 	@rm -f $(NAME)
 
-re				:	fclean all
+re:	fclean all
 
 .PHONY:	all clean fclean re
