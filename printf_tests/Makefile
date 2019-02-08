@@ -6,7 +6,7 @@
 #    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 18:02:03 by pscott            #+#    #+#              #
-#    Updated: 2019/02/08 15:55:09 by abarthel         ###   ########.fr        #
+#    Updated: 2019/02/08 16:10:24 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,14 +42,14 @@ test: $(NAME)
 #	@gcc $(INCLUDES) -o $@ -c $<
 
 clean:
-	@rm -f $(OBJS)
 	@make -C $(LIB_UNIT_DIR) clean
-	@printf "\x1b[34;01mclean done\x1b[0m"
+	@rm -f $(OBJS)
+	@printf "\e[38;5;21mclean done\e[0m\n"
 
 fclean: clean
-	@rm -f $(NAME)
 	@make -C $(LIB_UNIT_DIR) fclean
-	@printf "\x1b[31;01mfclean done\x1b[0m"
+	@rm -f $(NAME)
+	@printf "\e[38;5;31mfclean done\e[0m\n"
 
 re: fclean all
 
