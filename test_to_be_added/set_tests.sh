@@ -66,14 +66,17 @@ do
 		#echo "$printf_tests_repo$dir"
 	fi
 done
-# Fill main.c && launcher.h 
+# Fill main.c && launcher.h
 for dir in $FOLDER
 do
 	# Grab the type for a given repository
 	echo ""
 	echo ""
-	echo "void	$dir""_launcher(t_err_info *info);" #to be added in launchers.h
-#	sed  '/\[option\]/a Hello World' input
+	declare prototype="void  $dir""_launcher(t_err_info *info);"
+	echo "$prototype" #to be added in launchers.h
+	echo " ##########################"
+	echo $(sed -e '/PROTOTYPES/a\'$'\n'"$prototype" launchers.h) > launchers.bak
+#	awk '/PROTOTYPES/{print;print "OK";next}1' launchers.h ##########################
 	echo $printf_tests_repo
 	echo "$dir""_launcher(info);" #to be added in main.c
 	echo $printf_tests_repo

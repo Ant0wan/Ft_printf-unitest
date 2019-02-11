@@ -1,0 +1,64 @@
+/Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var 00_FOLDER_launcher.c FOLDER.h KK_TYPE_NAME.C Makefile XX_TYPE_NAME.c archive launchers.h main.c set_tests.sh tests.txt archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var ::: :::::::: archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var launchers.h :+: :+: :+: archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var +:+ +:+ +:+ archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var By: abarthel <abarthel@student.42.fr> +#+ +:+ +#+ archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var +#+#+#+#+#+ +#+ archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var Created: 2019/01/22 18:32:47 by abarthel #+# #+# archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var Updated: 2019/02/11 13:13:11 by abarthel ### ########.fr archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var archive/ /Applications /Library /Network /System /Users /Volumes /bin /cdn /cores /dev /etc /goinfre /home /installer.failurerequests /net /nfs /opt /private /sbin /sgoinfre /tmp /usr /var 00_FOLDER_launcher.c FOLDER.h KK_TYPE_NAME.C Makefile XX_TYPE_NAME.c archive launchers.h main.c set_tests.sh tests.txt archive/ #ifndef LAUNCHERS_H # define LAUNCHERS_H # include "libunit.h" //PROTOTYPES void conversions_launcher(t_err_info *info); #endif
+/* ************************************************************************** */
+/* */
+/* ::: :::::::: */
+/* launchers.h :+: :+: :+: */
+/* +:+ +:+ +:+ */
+/* By: abarthel <abarthel@student.42.fr> +#+ +:+ +#+ */
+/* +#+#+#+#+#+ +#+ */
+/* Created: 2019/01/22 18:32:47 by abarthel #+# #+# */
+/* Updated: 2019/02/11 13:13:11 by abarthel ### ########.fr */
+/* */
+/* ************************************************************************** */
+
+#ifndef LAUNCHERS_H
+# define LAUNCHERS_H
+
+# include "libunit.h"
+
+//PROTOTYPES
+void flags_launcher(t_err_info *info);
+
+#endif
+/* ************************************************************************** */
+/* */
+/* ::: :::::::: */
+/* launchers.h :+: :+: :+: */
+/* +:+ +:+ +:+ */
+/* By: abarthel <abarthel@student.42.fr> +#+ +:+ +#+ */
+/* +#+#+#+#+#+ +#+ */
+/* Created: 2019/01/22 18:32:47 by abarthel #+# #+# */
+/* Updated: 2019/02/11 13:13:11 by abarthel ### ########.fr */
+/* */
+/* ************************************************************************** */
+
+#ifndef LAUNCHERS_H
+# define LAUNCHERS_H
+
+# include "libunit.h"
+
+//PROTOTYPES
+void unicode_launcher(t_err_info *info);
+
+#endif
+/* ************************************************************************** */
+/* */
+/* ::: :::::::: */
+/* launchers.h :+: :+: :+: */
+/* +:+ +:+ +:+ */
+/* By: abarthel <abarthel@student.42.fr> +#+ +:+ +#+ */
+/* +#+#+#+#+#+ +#+ */
+/* Created: 2019/01/22 18:32:47 by abarthel #+# #+# */
+/* Updated: 2019/02/11 13:13:11 by abarthel ### ########.fr */
+/* */
+/* ************************************************************************** */
+
+#ifndef LAUNCHERS_H
+# define LAUNCHERS_H
+
+# include "libunit.h"
+
+//PROTOTYPES
+void width_launcher(t_err_info *info);
+
+#endif
