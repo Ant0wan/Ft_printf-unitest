@@ -81,30 +81,8 @@ do
 	mv "00_$dir""_launcher.c" "$printf_tests_repo$dir"
 done
 
-# load_test(&putchar_basic, &testlist, "basic_test", 0);
-
-
 # Copies the launchers.h to the test repository
 cp launchers.h $printf_tests_repo
 cp main.c $printf_tests_repo
 
-### Format: FOLDER;TYPE;NAME;ARG ###
-
-#echo "OOOOOOOOOOOOOOOOOOOOOOOOOOO"
-
-#FOLDERS_TEST=()
-#IFS=$'\n'       # make newlines the only separator
-#set -f          # disable globbing
-#i=0
-#for q in $(cat < "tests.txt"); do
-#	FOLDERS_TEST[$i]+="$(echo $q | cut -d ';' -f1)"
-#	if [ !$(cd $printf_tests_repo/${FOLDERS_TEST[$i]} 2>/dev/null) ]
-#	then
-#		echo "$printf_tests_repo${FOLDERS_TEST[$i]}"
-#	fi
-##	echo "${FOLDERS_TEST[$i]}"
-#	((i++))
-#done
-
-
-
+### Format in tests.txt: FOLDER;TYPE;NAME;ARG ###
