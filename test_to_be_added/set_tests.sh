@@ -14,9 +14,7 @@
 # File name where the tests are written
 TEST_FILE="tests.txt"
 
-
-
-### REPOSITORY, MAIN, MAKEFILE, LAUNCHER.H ###
+### REPOSITORY and MAKEFILE ###
 # Check if repository exists
 declare printf_tests_repo="../printf_tests/"
 # Clean rule for repository, set to default (state before running script)
@@ -34,31 +32,12 @@ fi
 if [ ! -d $printf_tests_repo ]
 then
 	mkdir "$printf_tests_repo"
-	#echo $printf_tests_repo
 fi
-# Check if main.c exists
-#declare main=$printf_tests_repo"main.c"
-#if [ ! -f $main ]
-#then
-#	cp -f main.c $printf_tests_repo
-#	#echo "cp main.c $printf_tests_repo"
-#fi
-# Check if Makefile exists
 declare Makefile=$printf_tests_repo"Makefile"
 if [ ! -f $Makefile ]
 then
 	cp -f Makefile $printf_tests_repo
-	#echo "cp Makefile $printf_tests_repo"
 fi
-# Check if launcher.h exists
-#declare launcherH=$printf_tests_repo"launchers.h"
-#if [ ! -f $launcherH ]
-#then
-#	cp -f launchers.h $printf_tests_repo
-#	#echo "cp launchers.h $printf_tests_repo"
-#fi
-
-
 
 ### CREATE TESTS ###
 declare -a FOLDER=$(cat $TEST_FILE | cut -d ";" -f1 | sort | uniq)
@@ -90,13 +69,13 @@ do
 	for i in $TYPE
 	do
 		digit="$(printf %02d $(echo "$index+1" | bc))"
-		echo $digit
-		echo "${type[index]}"
-		echo "${name[index]}"
+		#echo $digit
+		#echo "${type[index]}"
+		#echo "${name[index]}"
 		ARG="$(cat $TEST_FILE | grep $dir';' | grep ${type[index]}';' | grep ${name[index]}';' | cut -d ";" -f4)"
-		sed "s/XXX/$ARG/g" XX_TYPE_NAME.c | sed "s/XX/$digit/g" | sed "s/TYPE/${type[index]}/g" | sed "s/NAME/${name[index]}/g"
-	   	echo "$printf_tests_repo$dir"
-		cp XX_TYPE_NAME.c "$printf_tests_repo$dir"
+		sed "s/XXX/$ARG/g" XX_TYPE_NAME.c | sed "s/XX/$digit/g" | sed "s/TYPE/${type[index]}/g" | sed "s/NAME/${name[index]}/g" > $digit""_${type[index]}""_${name[index]}.c
+	   	#echo "$printf_tests_repo$dir"
+		mv $digit""_${type[index]}""_${name[index]}.c "$printf_tests_repo$dir"
 #		cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${type[index]}'/g' | sed 's/NAME/'${name[index]}'/g'
 		((index++))
 	done
