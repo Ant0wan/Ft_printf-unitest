@@ -15,6 +15,7 @@
 TEST_FILE="tests.txt"
 
 
+
 ### REPOSITORY, MAIN, MAKEFILE, LAUNCHER.H ###
 # Check if repository exists
 declare printf_tests_repo="../printf_tests/"
@@ -51,9 +52,8 @@ then
 	cp -f launchers.h $printf_tests_repo
 	#echo "cp launchers.h $printf_tests_repo"
 fi
-echo ""
-echo ""
-echo ""
+
+
 
 ### CREATE TESTS ###
 declare -a FOLDER=$(cat $TEST_FILE | cut -d ";" -f1 | sort | uniq)
@@ -70,6 +70,8 @@ done
 for dir in $FOLDER
 do
 	# Grab the type for a given repository
+	echo ""
+	echo ""
 	echo "void	$dir""_launcher(t_err_info *info);" #to be added in launchers.h
 	
 	echo $printf_tests_repo
@@ -95,21 +97,21 @@ done
 
 ### Format: FOLDER;TYPE;NAME;ARG ###
 
-echo "OOOOOOOOOOOOOOOOOOOOOOOOOOO"
+#echo "OOOOOOOOOOOOOOOOOOOOOOOOOOO"
 
-FOLDERS_TEST=()
-IFS=$'\n'       # make newlines the only separator
-set -f          # disable globbing
-i=0
-for q in $(cat < "tests.txt"); do
-	FOLDERS_TEST[$i]+="$(echo $q | cut -d ';' -f1)"
-	if [ !$(cd $printf_tests_repo/${FOLDERS_TEST[$i]} 2>/dev/null) ]
-	then
-		echo "$printf_tests_repo${FOLDERS_TEST[$i]}"
-	fi
-#	echo "${FOLDERS_TEST[$i]}"
-	((i++))
-done
+#FOLDERS_TEST=()
+#IFS=$'\n'       # make newlines the only separator
+#set -f          # disable globbing
+#i=0
+#for q in $(cat < "tests.txt"); do
+#	FOLDERS_TEST[$i]+="$(echo $q | cut -d ';' -f1)"
+#	if [ !$(cd $printf_tests_repo/${FOLDERS_TEST[$i]} 2>/dev/null) ]
+#	then
+#		echo "$printf_tests_repo${FOLDERS_TEST[$i]}"
+#	fi
+##	echo "${FOLDERS_TEST[$i]}"
+#	((i++))
+#done
 
 
 
