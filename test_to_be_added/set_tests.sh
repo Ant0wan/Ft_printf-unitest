@@ -18,10 +18,16 @@ TEST_FILE="tests.txt"
 ### REPOSITORY, MAIN, MAKEFILE, LAUNCHER.H ###
 # Check if repository exists
 declare printf_tests_repo="../printf_tests/"
+# Re rule for repository
+if test $1; then
+	if [ $1 = "re" ]; then
+		rm -rf $printf_tests_repo
+	fi
+fi
+# Creates repo
 if [ ! -d $printf_tests_repo ]
 then
 	mkdir "$printf_tests_repo"
-	printf "\e[38;5;33mTest repository created: $printf_tests_repo\n\e[0m"
 	#echo $printf_tests_repo
 fi
 # Check if main.c exists
@@ -29,7 +35,6 @@ declare main=$printf_tests_repo"main.c"
 if [ ! -f $main ]
 then
 	cp -f main.c $printf_tests_repo
-	printf "\e[38;5;32mMain copied\n\e[0m"
 	#echo "cp main.c $printf_tests_repo"
 fi
 # Check if Makefile exists
@@ -37,7 +42,6 @@ declare Makefile=$printf_tests_repo"Makefile"
 if [ ! -f $Makefile ]
 then
 	cp -f Makefile $printf_tests_repo
-	printf "\e[38;5;31mMain copied\n\e[0m"
 	#echo "cp Makefile $printf_tests_repo"
 fi
 # Check if launcher.h exists
@@ -45,7 +49,6 @@ declare launcherH=$printf_tests_repo"launchers.h"
 if [ ! -f $launcherH ]
 then
 	cp -f launchers.h $printf_tests_repo
-	printf "\e[38;5;30mlaunchers.h copied\n\e[0m"
 	#echo "cp launchers.h $printf_tests_repo"
 fi
 echo ""
@@ -107,9 +110,6 @@ for q in $(cat < "tests.txt"); do
 #	echo "${FOLDERS_TEST[$i]}"
 	((i++))
 done
-
-
-
 
 
 
