@@ -81,18 +81,16 @@ do
 	# Add functions call to main.c
 	declare functionscall="$dir""_launcher(info);"
 	sed -e '/FUNCTIONS/a\'$'\n'"\	$functionscall" main.c > main.bak && cp -f main.bak main.c && rm main.bak
-	echo $printf_tests_repo
 	echo "00_$dir""_launcher.c" #to copy 00_FOLDER_launcher.c
 	declare -a TYPE=$(cat $TEST_FILE | grep $dir | cut -d ";" -f2)
 	declare -a NAME=$(cat $TEST_FILE | grep $dir | cut -d ";" -f3)
-	IFS=$' '
-	set -f
-	index=0
 	for i in $TYPE
 	do
-#		echo ${TYPE[$index]}
-#		echo ${NAME[$index]}
-		echo $dir${TYPE[$index]}${NAME[$index]}
+		echo ""
+		echo $i
+		#echo ${NAME[$index]}
+		#echo $dir${TYPE[$index]}" "${NAME[$index]}
+		#cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${TYPE[$index]}'/g'
 	done
 done
 
