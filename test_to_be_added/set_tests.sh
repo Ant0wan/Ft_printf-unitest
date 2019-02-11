@@ -96,6 +96,8 @@ do
 	done
 done
 
+# Copies the launchers.h to the test repository
+cp launchers.h $printf_tests_repo
 
 #For putting tests:
 #sed -i.bak "s/XXX/\"Hello dude%d\", 42/g" KK_TYPE_NAME.C && rm *.bak
