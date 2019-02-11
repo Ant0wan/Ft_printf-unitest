@@ -19,10 +19,13 @@ TEST_FILE="tests.txt"
 ### REPOSITORY, MAIN, MAKEFILE, LAUNCHER.H ###
 # Check if repository exists
 declare printf_tests_repo="../printf_tests/"
-# Re rule for repository
+# Clean rule for repository
 if test $1; then
-	if [ $1 = "re" ]; then
+	if [ $1 = "clean" ]; then
 		rm -rf $printf_tests_repo
+		rm launchers.h
+		cp ./archive/launchers.h ./
+		exit
 	fi
 fi
 # Creates repo
@@ -75,8 +78,7 @@ do
 	declare prototype="void  $dir""_launcher(t_err_info *info);"
 	echo "$prototype" #to be added in launchers.h
 	echo " ##########################"
-	echo $(sed -e '/PROTOTYPES/a\'$'\n'"$prototype" launchers.h) > launchers.bak
-#	awk '/PROTOTYPES/{print;print "OK";next}1' launchers.h ##########################
+	sed -e '/PROTOTYPES/a\'$'\n'"$prototype" launchers.h > launchers.bak && cp -f launchers.bak launchers.h && rm launchers.bak
 	echo $printf_tests_repo
 	echo "$dir""_launcher(info);" #to be added in main.c
 	echo $printf_tests_repo
