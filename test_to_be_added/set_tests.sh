@@ -19,12 +19,14 @@ TEST_FILE="tests.txt"
 ### REPOSITORY, MAIN, MAKEFILE, LAUNCHER.H ###
 # Check if repository exists
 declare printf_tests_repo="../printf_tests/"
-# Clean rule for repository
+# Clean rule for repository, set to default (state before running script)
 if test $1; then
 	if [ $1 = "clean" ]; then
 		rm -rf $printf_tests_repo
 		rm launchers.h
 		cp ./archive/launchers.h ./
+		rm main.c
+		cp ./archive/main.c ./
 		exit
 	fi
 fi
@@ -35,12 +37,12 @@ then
 	#echo $printf_tests_repo
 fi
 # Check if main.c exists
-declare main=$printf_tests_repo"main.c"
-if [ ! -f $main ]
-then
-	cp -f main.c $printf_tests_repo
-	#echo "cp main.c $printf_tests_repo"
-fi
+#declare main=$printf_tests_repo"main.c"
+#if [ ! -f $main ]
+#then
+#	cp -f main.c $printf_tests_repo
+#	#echo "cp main.c $printf_tests_repo"
+#fi
 # Check if Makefile exists
 declare Makefile=$printf_tests_repo"Makefile"
 if [ ! -f $Makefile ]
@@ -49,12 +51,12 @@ then
 	#echo "cp Makefile $printf_tests_repo"
 fi
 # Check if launcher.h exists
-declare launcherH=$printf_tests_repo"launchers.h"
-if [ ! -f $launcherH ]
-then
-	cp -f launchers.h $printf_tests_repo
-	#echo "cp launchers.h $printf_tests_repo"
-fi
+#declare launcherH=$printf_tests_repo"launchers.h"
+#if [ ! -f $launcherH ]
+#then
+#	cp -f launchers.h $printf_tests_repo
+#	#echo "cp launchers.h $printf_tests_repo"
+#fi
 
 
 
@@ -72,15 +74,13 @@ done
 # Fill main.c && launcher.h
 for dir in $FOLDER
 do
-	# Grab the type for a given repository
 	echo ""
-	echo ""
+	# Add prototypes to launchers.h
 	declare prototype="void  $dir""_launcher(t_err_info *info);"
-	echo "$prototype" #to be added in launchers.h
-	echo " ##########################"
 	sed -e '/PROTOTYPES/a\'$'\n'"$prototype" launchers.h > launchers.bak && cp -f launchers.bak launchers.h && rm launchers.bak
-	echo $printf_tests_repo
-	echo "$dir""_launcher(info);" #to be added in main.c
+	# Add functions call to main.c
+	declare functionscall="$dir""_launcher(info);"
+	sed -e '/FUNCTIONS/a\'$'\n'"\	$functionscall" main.c > main.bak && cp -f main.bak main.c && rm main.bak
 	echo $printf_tests_repo
 	echo "00_$dir""_launcher.c" #to copy 00_FOLDER_launcher.c
 	declare -a TYPE=$(cat $TEST_FILE | grep $dir | cut -d ";" -f2)
@@ -98,6 +98,7 @@ done
 
 # Copies the launchers.h to the test repository
 cp launchers.h $printf_tests_repo
+cp main.c $printf_tests_repo
 
 #For putting tests:
 #sed -i.bak "s/XXX/\"Hello dude%d\", 42/g" KK_TYPE_NAME.C && rm *.bak
