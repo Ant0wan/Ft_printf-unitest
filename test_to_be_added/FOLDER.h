@@ -6,12 +6,14 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 18:00:17 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/07 18:04:49 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/11 15:56:44 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef conversions_H
 # define conversions_H
+
+/* PROTOTYPES */
 
 
 #endif

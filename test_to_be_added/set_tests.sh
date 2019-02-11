@@ -47,7 +47,6 @@ do
 	if [ ! -d $printf_tests_repo$dir ]
 	then
 		mkdir "$printf_tests_repo$dir"
-		#echo "$printf_tests_repo$dir"
 	fi
 done
 # Fill main.c && launcher.h
@@ -60,6 +59,7 @@ do
 	# Add functions call to main.c
 	declare functionscall="$dir""_launcher(info);"
 	sed -e '/FUNCTIONS/a\'$'\n'"\	$functionscall" main.c > main.bak && cp -f main.bak main.c && rm main.bak
+	sed 's/FOLDER/'$dir'/g' 00_FOLDER_launcher.c > 00_$dir""_launcher.c
 	
 	declare TYPE=$(cat $TEST_FILE | grep $dir | cut -d ";" -f2)
 	declare NAME=$(cat $TEST_FILE | grep $dir | cut -d ";" -f3)
@@ -74,9 +74,7 @@ do
 		#echo "${name[index]}"
 		ARG="$(cat $TEST_FILE | grep $dir';' | grep ${type[index]}';' | grep ${name[index]}';' | cut -d ";" -f4)"
 		sed "s/XXX/$ARG/g" XX_TYPE_NAME.c | sed "s/XX/$digit/g" | sed "s/TYPE/${type[index]}/g" | sed "s/NAME/${name[index]}/g" > $digit""_${type[index]}""_${name[index]}.c
-	   	#echo "$printf_tests_repo$dir"
 		mv $digit""_${type[index]}""_${name[index]}.c "$printf_tests_repo$dir"
-#		cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${type[index]}'/g' | sed 's/NAME/'${name[index]}'/g'
 		((index++))
 	done
 	echo "00_$dir""_launcher.c" #to copy 00_FOLDER_launcher.c
