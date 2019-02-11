@@ -21,6 +21,7 @@ declare printf_tests_repo="../printf_tests/"
 # Clean rule for repository, set to default (state before running script)
 if test $1; then
 	if [ $1 = "clean" ]; then
+		make -C $printf_tests_repo fclean
 		rm -rf $printf_tests_repo
 		rm launchers.h
 		cp ./archive/launchers.h ./
@@ -53,7 +54,6 @@ done
 # Fill main.c, launcher.h, testsfiles, types.h and launchers
 for dir in $FOLDER
 do
-	echo ""
 	# Add prototypes to launchers.h
 	declare prototype="void  $dir""_launcher(t_err_info *info);"
 	sed -e '/PROTOTYPES/a\'$'\n'"$prototype" launchers.h > launchers.bak && cp -f launchers.bak launchers.h && rm launchers.bak
@@ -70,9 +70,6 @@ do
 	for i in $TYPE
 	do
 		digit="$(printf %02d $(echo "$index+1" | bc))"
-		#echo $digit
-		#echo "${type[index]}"
-		#echo "${name[index]}"
 		ARG="$(cat $TEST_FILE | grep $dir';' | grep ${type[index]}';' | grep ${name[index]}';' | cut -d ";" -f4)"
 		sed "s/XXX/$ARG/g" XX_TYPE_NAME.c | sed "s/XX/$digit/g" | sed "s/TYPE/${type[index]}/g" | sed "s/NAME/${name[index]}/g" > $digit""_${type[index]}""_${name[index]}.c
 		mv $digit""_${type[index]}""_${name[index]}.c "$printf_tests_repo$dir"

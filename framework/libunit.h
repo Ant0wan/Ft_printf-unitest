@@ -6,7 +6,7 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 18:14:47 by pscott            #+#    #+#             */
-/*   Updated: 2019/02/07 17:37:44 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/11 17:26:56 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ int						void_printf_test(const char *restrict format, ...);
 void					print_test(char *name);
 
 char					*strnew(size_t size);
+
+wchar_t					*wstrnew(size_t size);
 
 #endif

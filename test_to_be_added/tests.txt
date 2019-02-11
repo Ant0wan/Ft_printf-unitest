@@ -1,8 +1,4 @@
 conversions;int;printone;"%d\n", 42
 conversions;int;printtwo;"%d, %d\n", 42, 21
 conversions;int;printoneandstring;"%d %s\n", 42, "Hello"
-conversions;long;printone;"%l\n", 42
-width;int;printone;"%10d\n", 42
-flags;long;printone;"%#10l\n", 42
-unicode;range;character;"%ls", L'H'
-unicode;widechar;string;"%ls", L'Hello'
+conversions;long;printlongone;"%l\n", 42

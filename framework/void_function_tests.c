@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 13:54:00 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/07 17:49:28 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/11 17:31:08 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 #include <sys/wait.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <wchar.h>
 
-#define BUFF 2048
+#define BUFF 1024
 
 int		void_char_test(int len, void (*f)(char), char input)
 {
