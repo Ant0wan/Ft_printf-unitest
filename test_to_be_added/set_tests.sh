@@ -13,6 +13,7 @@
 
 # File name where the tests are written
 TEST_FILE="tests.txt"
+#Format in TEST-FILE: FOLDER;TYPE;NAME;ARG
 
 ### REPOSITORY and MAKEFILE ###
 # Check if repository exists
@@ -49,7 +50,7 @@ do
 		mkdir "$printf_tests_repo$dir"
 	fi
 done
-# Fill main.c && launcher.h
+# Fill main.c, launcher.h, testsfiles, types.h and launchers
 for dir in $FOLDER
 do
 	echo ""
@@ -60,7 +61,7 @@ do
 	declare functionscall="$dir""_launcher(info);"
 	sed -e '/FUNCTIONS/a\'$'\n'"\	$functionscall" main.c > main.bak && cp -f main.bak main.c && rm main.bak
 	sed 's/FOLDER/'$dir'/g' 00_FOLDER_launcher.c > 00_$dir""_launcher.c
-	
+	sed 's/FOLDER/'$dir'/g' FOLDER.h > $dir.h
 	declare TYPE=$(cat $TEST_FILE | grep $dir | cut -d ";" -f2)
 	declare NAME=$(cat $TEST_FILE | grep $dir | cut -d ";" -f3)
 	read -a type <<< $TYPE
@@ -76,13 +77,12 @@ do
 		sed "s/XXX/$ARG/g" XX_TYPE_NAME.c | sed "s/XX/$digit/g" | sed "s/TYPE/${type[index]}/g" | sed "s/NAME/${name[index]}/g" > $digit""_${type[index]}""_${name[index]}.c
 		mv $digit""_${type[index]}""_${name[index]}.c "$printf_tests_repo$dir"
 		sed -e '/LOAD TESTS/a\'$'\n'"\	load_test(&${type[index]}_${name[index]}, &testlist, \"${type[index]}_${name[index]}\", 0);" 00_$dir""_launcher.c > 00_$dir""_launcher.bak && cp -f 00_$dir""_launcher.bak 00_$dir""_launcher.c && rm 00_$dir""_launcher.bak
+		sed -e '/PROTOTYPES/a\'$'\n'"int\	${type[index]}_${name[index]}(void);" $dir.h
 		((index++))
 	done
 	mv "00_$dir""_launcher.c" "$printf_tests_repo$dir"
+	mv $dir.h "$printf_tests_repo$dir"
 done
-
 # Copies the launchers.h to the test repository
 cp launchers.h $printf_tests_repo
 cp main.c $printf_tests_repo
-
-### Format in tests.txt: FOLDER;TYPE;NAME;ARG ###
