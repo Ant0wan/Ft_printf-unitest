@@ -39,8 +39,9 @@ do
 	index=0
 	for i in $TYPE
 	do
-		echo ${TYPE[$index]}
-		echo ${NAME[$index]}
+#		echo ${TYPE[$index]}
+#		echo ${NAME[$index]}
+		echo $dir${TYPE[$index]}${NAME[$index]}
 	done
 done
 

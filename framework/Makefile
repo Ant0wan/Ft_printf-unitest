@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 16:55:38 by abarthel          #+#    #+#              #
-#    Updated: 2019/02/08 16:11:56 by abarthel         ###   ########.fr        #
+#    Updated: 2019/02/11 11:48:57 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,12 +34,13 @@ $(NAME): $(OBJS)
 %.o: %.c
 	@gcc $(FLAGS) $(INCLUDES) -o $@ -c $<
 
-
 clean:
 	@rm -f $(OBJS)
+	@printf "\e[38;5;231mFra\e[38;5;230mmew\e[38;5;223mork \e[0m.o\e[38;5;223m fi\e[38;5;230mles del\e[38;5;231meted\e[0m\n"
 
 fclean:	clean
 	@rm -f $(NAME)
+	@printf "\e[38;5;231mFra\e[38;5;230mmew\e[38;5;223mork \e[0m.a\e[38;5;230m del\e[38;5;231meted\e[0m\n"
 
 re:	fclean all
 
