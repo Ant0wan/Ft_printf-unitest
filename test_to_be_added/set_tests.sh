@@ -89,10 +89,11 @@ do
 	index=0
 	for i in $TYPE
 	do
-		digit="$(printf %02d $index)"
+		digit="$(printf %02d $(echo "$index+1" | bc))"
 		echo $digit
-#		echo "${type[index]}"
-#		echo "${name[index]}"
+		echo "${type[index]}"
+		echo "${name[index]}"
+		cat $TEST_FILE | grep $dir';' | grep ${type[index]}';' | grep ${name[index]}';'
 #		cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${type[index]}'/g' | sed 's/NAME/'${name[index]}'/g'
 		((index++))
 	done
