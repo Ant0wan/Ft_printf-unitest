@@ -14,31 +14,56 @@
 # File name where the tests are written
 TEST_FILE="tests.txt"
 
+
+### REPOSITORY, MAIN, MAKEFILE, LAUNCHER.H ###
 # Check if repository exists
 declare printf_tests_repo="../printf_tests/"
 if [ ! -d $printf_tests_repo ]
 then
-	#mkdir "$printf_tests_repo"
-	echo $printf_tests_repo
+	mkdir "$printf_tests_repo"
+	printf "\e[38;5;33mTest repository created: $printf_tests_repo\n\e[0m"
+	#echo $printf_tests_repo
 fi
-
 # Check if main.c exists
 declare main=$printf_tests_repo"main.c"
 if [ ! -f $main ]
 then
-	#cp main.c $printf_tests_repo
-	echo "cp main.c $printf_tests_repo"
+	cp -f main.c $printf_tests_repo
+	printf "\e[38;5;32mMain copied\n\e[0m"
+	#echo "cp main.c $printf_tests_repo"
 fi
+# Check if Makefile exists
+declare Makefile=$printf_tests_repo"Makefile"
+if [ ! -f $Makefile ]
+then
+	cp -f Makefile $printf_tests_repo
+	printf "\e[38;5;31mMain copied\n\e[0m"
+	#echo "cp Makefile $printf_tests_repo"
+fi
+# Check if launcher.h exists
+declare launcherH=$printf_tests_repo"launchers.h"
+if [ ! -f $launcherH ]
+then
+	cp -f launchers.h $printf_tests_repo
+	printf "\e[38;5;30mlaunchers.h copied\n\e[0m"
+	#echo "cp launchers.h $printf_tests_repo"
+fi
+echo ""
+echo ""
+echo ""
+
+### CREATE TESTS ###
 declare -a FOLDER=$(cat $TEST_FILE | cut -d ";" -f1 | sort | uniq)
+# Creates a repository for each category
 for dir in $FOLDER
 do
 	if [ ! -d $printf_tests_repo$dir ]
 	then
-#		mkdir "$printf_tests_repo$dir"
-		echo "$printf_tests_repo$dir"
+		mkdir "$printf_tests_repo$dir"
+		#echo "$printf_tests_repo$dir"
 	fi
 done
-
+# Fill main.c && launcher.h 
 for dir in $FOLDER
 do
 	# Grab the type for a given repository
