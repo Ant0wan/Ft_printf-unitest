@@ -14,6 +14,7 @@
 # File name where the tests are written
 TEST_FILE="tests.txt"
 #Format in TEST-FILE: FOLDER;TYPE;NAME;ARG
+cd test_to_be_added/
 
 ### REPOSITORY and MAKEFILE ###
 # Check if repository exists
@@ -21,34 +22,34 @@ declare printf_tests_repo="../printf_tests/"
 # Clean rule for repository, set to default (state before running script)
 if test $1; then
 	if [ $1 = "clean" ]; then
-		make -C $printf_tests_repo fclean
-		rm -rf $printf_tests_repo
-		rm launchers.h
+		make -C ./$printf_tests_repo fclean
+		rm -rf ./$printf_tests_repo
+		rm ./launchers.h
 		cp ./archive/launchers.h ./
-		rm main.c
+		rm ./main.c
 		cp ./archive/main.c ./
 		exit
 	fi
 fi
 # Creates repo
-if [ ! -d $printf_tests_repo ]
+if [ ! -d ./$printf_tests_repo ]
 then
-	mkdir "$printf_tests_repo"
+	mkdir "./$printf_tests_repo"
 fi
-declare Makefile=$printf_tests_repo"Makefile"
-if [ ! -f $Makefile ]
+declare Makefile=./$printf_tests_repo"Makefile"
+if [ ! -f ./$Makefile ]
 then
-	cp -f Makefile $printf_tests_repo
+	cp -f Makefile ./$printf_tests_repo
 fi
 
 ### CREATE TESTS ###
-declare -a FOLDER=$(cat $TEST_FILE | cut -d ";" -f1 | sort | uniq)
+declare -a FOLDER=$(cat ./$TEST_FILE | cut -d ";" -f1 | sort | uniq)
 # Creates a repository for each category
 for dir in $FOLDER
 do
-	if [ ! -d $printf_tests_repo$dir ]
+	if [ ! -d ./$printf_tests_repo$dir ]
 	then
-		mkdir "$printf_tests_repo$dir"
+		mkdir "./$printf_tests_repo$dir"
 	fi
 done
 # Fill main.c, launcher.h, testsfiles, types.h and launchers
