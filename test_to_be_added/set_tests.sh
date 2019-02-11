@@ -81,7 +81,7 @@ do
 	# Add functions call to main.c
 	declare functionscall="$dir""_launcher(info);"
 	sed -e '/FUNCTIONS/a\'$'\n'"\	$functionscall" main.c > main.bak && cp -f main.bak main.c && rm main.bak
-	echo "00_$dir""_launcher.c" #to copy 00_FOLDER_launcher.c
+	
 	declare TYPE=$(cat $TEST_FILE | grep $dir | cut -d ";" -f2)
 	declare NAME=$(cat $TEST_FILE | grep $dir | cut -d ";" -f3)
 	read -a type <<< $TYPE
@@ -90,11 +90,12 @@ do
 	for i in $TYPE
 	do
 		echo ""
-		echo "${type[index]}"
-		echo "${name[index]}"
-		cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${type[index]}'/g' | sed 's/NAME/'${name[index]}'/g'
+#		echo "${type[index]}"
+#		echo "${name[index]}"
+#		cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${type[index]}'/g' | sed 's/NAME/'${name[index]}'/g'
 		((index++))
 	done
+	echo "00_$dir""_launcher.c" #to copy 00_FOLDER_launcher.c
 done
 
 # Copies the launchers.h to the test repository
