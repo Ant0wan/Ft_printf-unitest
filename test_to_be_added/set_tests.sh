@@ -83,3 +83,6 @@ done
 # Copies the launchers.h to the test repository
 cp launchers.h $printf_tests_repo
 cp main.c $printf_tests_repo
+
+### LAUNCH TESTS ###
+make -C $printf_tests_repo test
