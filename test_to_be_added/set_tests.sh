@@ -89,7 +89,8 @@ do
 	index=0
 	for i in $TYPE
 	do
-		echo ""
+		digit="$(printf %02d $index)"
+		echo $digit
 #		echo "${type[index]}"
 #		echo "${name[index]}"
 #		cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${type[index]}'/g' | sed 's/NAME/'${name[index]}'/g'
