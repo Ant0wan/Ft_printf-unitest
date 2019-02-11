@@ -73,7 +73,7 @@ do
 	echo ""
 	echo ""
 	echo "void	$dir""_launcher(t_err_info *info);" #to be added in launchers.h
-	
+#	sed  '/\[option\]/a Hello World' input
 	echo $printf_tests_repo
 	echo "$dir""_launcher(info);" #to be added in main.c
 	echo $printf_tests_repo
