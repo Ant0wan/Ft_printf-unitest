@@ -93,7 +93,9 @@ do
 		echo $digit
 		echo "${type[index]}"
 		echo "${name[index]}"
-		cat $TEST_FILE | grep $dir';' | grep ${type[index]}';' | grep ${name[index]}';'
+		ARG="$(cat $TEST_FILE | grep $dir';' | grep ${type[index]}';' | grep ${name[index]}';' | cut -d ";" -f4)"
+		sed "s/XXX/$ARG/g" XX_TYPE_NAME.c | sed "s/XX/$digit/g" | sed "s/TYPE/${type[index]}/g" | sed "s/NAME/${name[index]}/g"
+	   	echo "$printf_tests_repo$dir"
 #		cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${type[index]}'/g' | sed 's/NAME/'${name[index]}'/g'
 		((index++))
 	done
