@@ -77,7 +77,7 @@ do
 		mv $digit""_${type[index]}""_${name[index]}.c "$printf_tests_repo$dir"
 		((index++))
 	done
-	echo "00_$dir""_launcher.c" #to copy 00_FOLDER_launcher.c
+	mv "00_$dir""_launcher.c" "$printf_tests_repo$dir"
 done
 
 # Copies the launchers.h to the test repository
