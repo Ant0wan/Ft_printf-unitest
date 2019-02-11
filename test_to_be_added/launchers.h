@@ -556,5 +556,17 @@ void  width_launcher(t_err_info *info);
 void  unicode_launcher(t_err_info *info);
 void  flags_launcher(t_err_info *info);
 void  conversions_launcher(t_err_info *info);
+void  width_launcher(t_err_info *info);
+void  unicode_launcher(t_err_info *info);
+void  flags_launcher(t_err_info *info);
+void  conversions_launcher(t_err_info *info);
+void  width_launcher(t_err_info *info);
+void  unicode_launcher(t_err_info *info);
+void  flags_launcher(t_err_info *info);
+void  conversions_launcher(t_err_info *info);
+void  width_launcher(t_err_info *info);
+void  unicode_launcher(t_err_info *info);
+void  flags_launcher(t_err_info *info);
+void  conversions_launcher(t_err_info *info);
 
 #endif

@@ -92,9 +92,8 @@ do
 		echo ""
 		echo "${type[index]}"
 		echo "${name[index]}"
+		cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${type[index]}'/g' | sed 's/NAME/'${name[index]}'/g'
 		((index++))
-		#echo $dir${TYPE[$index]}" "${NAME[$index]}
-		#cat 00_FOLDER_launcher.c | sed 's/FOLDER/'$dir'/g' | sed 's/TYPE/'${TYPE[$index]}'/g'
 	done
 done
 
