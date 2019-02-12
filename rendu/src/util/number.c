@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   XX_TYPE_NAME.c                                     :+:      :+:    :+:   */
+/*   number.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/12 15:03:26 by abarthel         ###   ########.fr       */
+/*   Created: 2017/10/17 08:35:30 by pbondoer          #+#    #+#             */
+/*   Updated: 2017/10/17 08:35:45 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../rendu/includes/ft_printf.h"
-#include "libunit.h"
+#include "ft_printf.h"
 
-#include <unistd.h>
-#include <stdio.h>
-#include <strings.h>
-
-#define ARG_TEST XXX
-
-int		TYPE_NAME(void)
+int		pf_max(int a, int b)
 {
-	if (!(void_printf_test(&ft_printf, ARG_TEST)))
-		return (0);
+	return (a > b ? a : b);
+}
+
+int		pf_get_base(char c)
+{
+	if (c == 'X' || c == 'x' || c == 'p')
+		return (16);
+	else if (c == 'o')
+		return (8);
 	else
-		return (-1);
+		return (10);
 }

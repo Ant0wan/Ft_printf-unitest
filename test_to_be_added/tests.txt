@@ -1,7 +1,1 @@
 conversions;int;int42;"%d\n", 42
-conversions;int;one_int;"%d\n Hello dude !! oihwefohwefoihwefoiwhef", 42
-conversions;int;printtwo;"%d, %d\n", 42, 21
-conversions;int;string;"%d %s\n", 42, "Hello"
-conversions;long;long42;"%ld\n", 42
-flags;int;zeros;"%0d\n", 15
-flags;int;zerbash;"%c\n", "Hello dude"

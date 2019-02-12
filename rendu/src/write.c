@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   XX_TYPE_NAME.c                                     :+:      :+:    :+:   */
+/*   write.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/12 15:03:26 by abarthel         ###   ########.fr       */
+/*   Created: 2017/09/17 01:31:24 by pbondoer          #+#    #+#             */
+/*   Updated: 2017/09/19 00:27:57 by pbondoer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../rendu/includes/ft_printf.h"
-#include "libunit.h"
-
 #include <unistd.h>
-#include <stdio.h>
-#include <strings.h>
 
-#define ARG_TEST XXX
+/*
+** TODO: Change this to use a buffer system
+*/
 
-int		TYPE_NAME(void)
+int			pf_write(const char *str, const size_t len)
 {
-	if (!(void_printf_test(&ft_printf, ARG_TEST)))
-		return (0);
-	else
-		return (-1);
+	write(1, str, len);
+	return (len);
+}
+
+int			pf_repeat(const char c, int len)
+{
+	int i;
+
+	i = 0;
+	while (i < len)
+	{
+		pf_write(&c, 1);
+		i++;
+	}
+	return (i);
 }

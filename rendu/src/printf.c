@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   XX_TYPE_NAME.c                                     :+:      :+:    :+:   */
+/*   printf.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/12 15:03:26 by abarthel         ###   ########.fr       */
+/*   Created: 2017/09/14 20:19:37 by pbondoer          #+#    #+#             */
+/*   Updated: 2019/02/12 15:06:01 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../rendu/includes/ft_printf.h"
-#include "libunit.h"
-
-#include <unistd.h>
+#include "ft_printf.h"
 #include <stdio.h>
-#include <strings.h>
 
-#define ARG_TEST XXX
-
-int		TYPE_NAME(void)
+int		ft_printf(const char *format, ...)
 {
-	if (!(void_printf_test(&ft_printf, ARG_TEST)))
-		return (0);
-	else
-		return (-1);
+	va_list	list;
+	int		result;
+
+	va_start(list, format);
+	result = printf(format, list);
+	va_end(list);
+	return (result);
 }
