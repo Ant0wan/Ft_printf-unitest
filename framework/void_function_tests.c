@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 13:54:00 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/11 17:31:08 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/12 11:54:23 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,17 +109,22 @@ int		void_printf_test(const char *restrict format, ...)
 	char	*buffer2;
 	int		stat;
 	int		fd[2];
+	int		ret_fd[2];
+	int		ret;
+	int		ret2;
 
 	buffer = strnew(BUFF);
 	buffer2 = strnew(BUFF);
 	stat = 0;
 	pipe(fd);
+	pipe(ret_fd);
 	if (fork() == 0)
 	{
 		close(1);
 		dup2(fd[1], 1);
 		va_start(ap, format);
-		printf(format, ap);
+		ret = printf(format, ap);
+		write(ret_fd[1], &ret, sizeof(int));
 		va_end(ap);
 		return (0);
 	}
@@ -127,12 +132,21 @@ int		void_printf_test(const char *restrict format, ...)
 	{
 		wait(&stat);
 		read(fd[0], buffer, BUFF);
+		read(ret_fd[0], &ret, sizeof(int));
 		va_start(ap, format);
-		sprintf(buffer2, format, ap);
+		ret2 = sprintf(buffer2, format, ap);
 		va_end(ap);
-		if (!(strcmp(buffer, buffer2)))
+		if (!(strcmp(buffer, buffer2)) && ret == ret2)
+		{
+			free(buffer);
+			free(buffer2);
 			return (0);
+		}
 		else
+		{
+			free(buffer);
+			free(buffer2);
 			return (-1);
+		}
 	}
 }
