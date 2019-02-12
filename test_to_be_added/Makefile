@@ -6,7 +6,7 @@
 #    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 18:02:03 by pscott            #+#    #+#              #
-#    Updated: 2019/02/12 12:23:47 by abarthel         ###   ########.fr        #
+#    Updated: 2019/02/12 14:11:01 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,9 @@ FLAGS = -Werror -Wall -Wextra
 
 FRAMEWORK_PATH = ../framework
 
-RENDU_PATH= ../rendu
+RENDU_PATH = ../rendu
+LIB_RENDU = -L $(RENDU_PATH) -lftprintf
+
 LIB_UNIT_DIR = ../framework
 LIB_UNIT = -L $(LIB_UNIT_DIR) -lunit
 
@@ -29,13 +31,13 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@make -C $(RENDU_PATH)
 	@make -C $(LIB_UNIT_DIR)
-	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) -o $(NAME) $(OBJS)
+	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_RENDU) -o $(NAME) $(OBJS)
 #	@gcc $(INCLUDES) $(LIB_UNIT) -o $(NAME) $(OBJS)
 	@printf "\e[38;5;51mFt\e[38;5;50m_\e[38;5;49mpr\e[38;5;48min\e[38;5;47mtf\e[38;5;46m te\e[38;5;47mst\e[38;5;48ms r\e[38;5;49mea\e[38;5;50mdy\e[0m\n"
 
 test: $(NAME)
-#	@gcc $(INCLUDES) $(LIB_UNIT) -o $(NAME) $(OBJS)
-	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) -o $(NAME) $(OBJS)
+#	@gcc $(INCLUDES) $(LIB_UNIT) $(LIB_RENDU) -o $(NAME) $(OBJS)
+	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_RENDU) -o $(NAME) $(OBJS)
 	@./$(NAME) || true
 
 %.o: %.c
