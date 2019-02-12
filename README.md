@@ -1,16 +1,14 @@
 Ongoing project:
 
 Still to be made:
-- conversions test
-- flags tests
-- rounding cases float tests
-- width tests
 - documentation README.md
 - CircleCI build test
 - Quality code and reviews
 
 
 Recently be done:
+- check the returning value of printf on top of output
+- script to build and code the tests tree
 - added templates
 - added macro in testings for easy replacing
 - void function for testing printf
