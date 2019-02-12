@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 13:54:00 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/12 11:54:23 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/12 13:55:05 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int		void_itoa_test(int len, void (*f)(int), int input, char *output)
 	}
 }
 
-int		void_printf_test(const char *restrict format, ...)
+int		void_printf_test(int (*f)(const char *restrict, ...), const char *restrict format, ...)
 {
 	va_list	ap;
 	char	*buffer;
@@ -123,7 +123,7 @@ int		void_printf_test(const char *restrict format, ...)
 		close(1);
 		dup2(fd[1], 1);
 		va_start(ap, format);
-		ret = printf(format, ap);
+		ret = f(format, ap);
 		write(ret_fd[1], &ret, sizeof(int));
 		va_end(ap);
 		return (0);
