@@ -2,7 +2,7 @@
 
 This micro-framework is a fork of Libunit [a 42 project] - a C Programming Language Micro-framework dedicated to unit testings. The framework is able to execute series of tests on C functions - one after the other - without interruption. It has been made for testing Ft_printf [a 42 project].
 
-The framework is linked to a script building test tree and all .c, .o, .h, repositories and makefile needed to perform the test of the "rendu" project - necessarily a version of ft_printf/printf like function source code.
+The framework is linked to a script building test tree and all .c, .o, .h, repositories and makefile needed to perform the test of the printf like function project - necessarily a version of ft_printf/printf like function source code.
 
 ---
 
@@ -25,7 +25,7 @@ wchar.h
 
 - `clean` argument can be given to `start.sh` to execute script with a clean option. the clean option deleted all routines and its root repository. It also put all files in `./test_to_be_added/` to their default value.
 
-- The symbolic link `write_your_tests.txt` allows acces to the `tests.txt` file in in the `./test_to_be_added/` repository. It contqins all tests applied to the "rendu" project. It follow the syntax:
+- The symbolic link `write_your_tests.txt` allows acces to the `tests.txt` file in in the `./test_to_be_added/` repository. It contains all tests applied to the printf like project. It follow the syntax:
 
 | Folder      | Type  | Name      | Arguments   |
 | ----------- | ----- | --------- | ----------- |
@@ -57,7 +57,7 @@ vim write_your_tests.txt
 
 - The compiled library is named libunit.a and is stored in `./framework/` repository.
 
-- The library is linked to the given code in `./rendu/` repository - should be the ft_printf source code containing a makefile.
+- The library is linked to the given code in target repository of the `./rendu/` symbolic link - should be the ft_printf source code containing a makefile.
 
 - The project must contain a Makefile with usual rules `make`, `clean`, `fclean` and `re`.
 
@@ -131,10 +131,10 @@ Example:
 git clone https://github.com/Ant0wan/Ft_printf-unitest.git && cd ./Ft_printf-unitest.git/
 ```
 
-- Copy your printf like function soucre code in the repository
+- Create a symbolic link to your printf like function soucre code repository
 
 ```shell=
-cp -f [Makefile+auteur+*.c+*.h+...] Ft_printf-unitest.git/rendu/
+ln -s ../[my path to printf like function] rendu
 ```
 
 - Add your tests following the specific format above-mentionned
@@ -142,6 +142,18 @@ cp -f [Makefile+auteur+*.c+*.h+...] Ft_printf-unitest.git/rendu/
 ```shell=
 vim write_your_tests.txt
 ```
+
+- Add the path of your .h in the ./test_to_be_added/XX_TYPE_NAME.c file
+
+Replace the line 13
+```shell=
+#include "../rendu/include/ft_printf.h" // to change with correct path
+```
+by
+```shell=
+#include "../rendu/[your include folder]/ft_printf.h"
+```
+
 
 - Once tests has been added, launch the script to build the tests tree and launch tests
 

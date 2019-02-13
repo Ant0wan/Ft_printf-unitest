@@ -6,11 +6,11 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/13 13:35:33 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/13 15:10:32 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../rendu/include/ft_printf.h" // to change with correct path
+#include "../rendu/libftprintf/ft_printf.h" // to change with correct path
 #include "libunit.h"
 
 #include <unistd.h>
