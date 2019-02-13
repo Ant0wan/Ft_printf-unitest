@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 13:54:00 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/13 10:55:00 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/13 14:21:14 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include <strings.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include <stdarg.h>
 #include <stdio.h>
 #include <wchar.h>
 
