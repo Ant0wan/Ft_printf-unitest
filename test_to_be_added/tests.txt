@@ -1,1 +1,2 @@
 conversions;int;int42;"Hello the int is: %d", 42
+conversions;int;twoint;"Hello %d the int is: %d", 42, 21
