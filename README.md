@@ -30,8 +30,29 @@ The framework is linked to a script building test tree and all .c, .o, .h, repos
 
 ## Description
 
-- Ft_printf-unitest contains a s
-- `start.sh` is a symbolink link to `/test_to_be_added/set_tests.sh` 
+- The symbolic link `start.sh` launch the script `set_tests.sh` in the `./test_to_be_added/` repository. The script builds the tests and its tree based on the input in file './test_to_be_added/test_to_be_added`.
+
+- The symbolic link `write_your_tests.txt` allows acces to the `tests.txt` file in in the `./test_to_be_added/` repository. It contqins all tests applied to the "rendu" project. It follow the syntax:
+
+| Signal | Description |
+| --- | --- |
+|     |     |  
+
+
+Tests can be added to tests.txt folling the above-mentionned format, e.g.
+
+```shell=
+vim write_your_tests.txt
+```
+
+input:
+
+```shell=
+unicode;chr;infinity;"%ls", L'∞'
+```
+
+some characters are not compatible with the framework: `/` and `\`. It is due to sed substitues not properly secured in `set_tests.sh`.
+
 - The framework stores tests in a list with a specific name which is written to the standard output.
 - Each test is executed in a separate process.
 - Each process is closed at the end of the test and gives the hand back to the parent process.
@@ -65,7 +86,7 @@ Results follow the format:
 
 Screenshot:
 
-[![Libunitscreenshot](https://i.imgur.com/h67sm9Z.png)](i.imgur.com/h67sm9Z.png)
+[![ftprintftest](https://i.imgur.com/)](i.imgur.com/)
 
 ### Test routines
 
