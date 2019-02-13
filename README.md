@@ -6,12 +6,6 @@ The framework is linked to a script building test tree and all .c, .o, .h, repos
 
 ---
 
-### Demo
-
-[![ftprintfunitestdemo](https://i.imgur.com/)](i.imgur.com)
-
----
-
 ## Description
 
 - The framework tests the return value and the output of any given printf like function - prototype containing a format string and an ellipse.
@@ -156,3 +150,7 @@ vim write_your_tests.txt
 ```
 
 - Check output !
+
+### Demo
+
+[![ftprintfunitestdemo](https://i.imgur.com/)](i.imgur.com)
