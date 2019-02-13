@@ -34,24 +34,24 @@ The framework is linked to a script building test tree and all .c, .o, .h, repos
 
 - The symbolic link `write_your_tests.txt` allows acces to the `tests.txt` file in in the `./test_to_be_added/` repository. It contqins all tests applied to the "rendu" project. It follow the syntax:
 
-| Signal | Description |
-| --- | --- |
-|     |     |  
+|    Folder   |  Type |   Name    |  Arguments  |
+| ----------- | ----- | --------- | ----------- |
+| conversions |  int  | inifinity | "%ls", L'∞' |
 
-
-Tests can be added to tests.txt folling the above-mentionned format, e.g.
-
-```shell=
-vim write_your_tests.txt
-```
-
-input:
+- Input example:
 
 ```shell=
 unicode;chr;infinity;"%ls", L'∞'
 ```
 
-some characters are not compatible with the framework: `/` and `\`. It is due to sed substitues not properly secured in `set_tests.sh`.
+- Some characters are not compatible with the framework: `/` and `\`. It is due to sed substitues not properly secured in `set_tests.sh`.
+
+- Tests can be added to tests.txt folling the above-mentionned format, e.g.
+
+```shell=
+vim write_your_tests.txt
+```
+
 
 - The framework stores tests in a list with a specific name which is written to the standard output.
 - Each test is executed in a separate process.
