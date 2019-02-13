@@ -6,17 +6,18 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/13 10:52:48 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/13 11:45:02 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../rendu/includes/ft_printf.h"
+#include "../rendu/libftprintf/ft_printf.h"
 #include "libunit.h"
 
 #include <unistd.h>
 #include <stdio.h>
 #include <strings.h>
 
+#define BUFF 1024
 #define ARG_TEST XXX
 
 int		TYPE_NAME(void)
@@ -38,7 +39,6 @@ int		TYPE_NAME(void)
 	{
 		close(1);
 		dup2(fd[1], 1);
-		dup2(2, 1);
 		ret = ft_printf(ARG_TEST);
 		write(ret_fd[1], &ret, sizeof(int));
 		return (0);
