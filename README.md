@@ -34,9 +34,9 @@ The framework is linked to a script building test tree and all .c, .o, .h, repos
 
 - The symbolic link `write_your_tests.txt` allows acces to the `tests.txt` file in in the `./test_to_be_added/` repository. It contqins all tests applied to the "rendu" project. It follow the syntax:
 
-|    Folder   |  Type |   Name    |  Arguments  |
+| Folder      | Type  | Name      | Arguments   |
 | ----------- | ----- | --------- | ----------- |
-| conversions |  int  | inifinity | "%ls", L'∞' |
+| conversions |  int  | inifinity | "%ls", L'∞' | <- Argument is what will be placed inside the printf(HERE);
 
 - Input example:
 
