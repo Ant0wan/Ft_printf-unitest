@@ -1,25 +1,3 @@
-Ongoing project:
-
-Still to be made:
-- documentation README.md
-- CircleCI build test
-- Quality code and reviews
-
-
-Recently be done:
-- check the returning value of printf on top of output
-- script to build and code the tests tree
-- added templates
-- added macro in testings for easy replacing
-- void function for testing printf
-- added few tests made be not at the right place (conversions)
-- testing function template for printf testing
-- framework using stdio.h
-
-
-
-
-
 # Ft_printf-unitest [![42](https://i.imgur.com/9NXfcit.jpg)](i.imgur.com/9NXfcit.jpg)[![freetime](https://i.imgur.com/8IcDLkc.png)](i.imgur.com/8IcDLkc.png)
 
 This micro-framework is a fork of Libunit [a 42 project] - a C Programming Language Micro-framework dedicated to unit testings. The framework is able to execute series of tests on C functions - one after the other - without interruption. It has been made for testing Ft_printf [a 42 project].
@@ -35,6 +13,8 @@ The framework is linked to a script building test tree and all .c, .o, .h, repos
 ---
 
 ## Description
+
+- The framework tests the return value and the output of any given printf like function - prototype containing a format string and an ellipse.
 
 - The framework uses `stdio.h` functions instead of the libft for better performances. It includes the following headers:
 
@@ -154,41 +134,25 @@ Example:
 - Clone repository
 
 ```shell=
-git clone https://github.com/Ant0wan/Libunit.git
+git clone https://github.com/Ant0wan/Ft_printf-unitest.git && cd ./Ft_printf-unitest.git/
 ```
 
-- Copy your work in the "rendu" repository
+- Copy your printf like function soucre code in the repository
 
 ```shell=
-cp -f [mywork_repository] Libunit/rendu/
+cp -f [Makefile+auteur+*.c+*.h+...] Ft_printf-unitest.git/rendu/
 ```
 
-- Compile and Run tests
+- Add your tests following the specific format above-mentionned
 
 ```shell=
-make -C [tests_directory] test
+vim write_your_tests.txt
+```
+
+- Once tests has been added, launch the script to build the tests tree and launch tests
+
+```shell=
+./start.sh
 ```
 
 - Check output !
-
-
-
-
-
-
-
-## Installation
-
-```shell=
-git clone https://github.com/Ant0wan/Ft_printf-unitest.git && cd Ft_printf-unitest/
-```
-
-Copy your ft_printf soucre code in the repository:
-
-```shell=
-cp -f [Makefile+auteur+*.c+*.h+...] Ft_printf-unitest/rendu/
-```
-
---- 
-
-
