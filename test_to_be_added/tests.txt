@@ -1,1 +1,1 @@
-conversions;int;int42;"%d\n", 42
+conversions;int;int42;"Hello the int is: %d", 42

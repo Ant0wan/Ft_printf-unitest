@@ -6,7 +6,7 @@
 /*   By: pbondoer <pbondoer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 22:22:58 by pbondoer          #+#    #+#             */
-/*   Updated: 2018/01/24 18:02:35 by pbondoer         ###   ########.fr       */
+/*   Updated: 2019/02/13 11:33:35 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ int				pf_write_chunk(const char *str, int free, size_t len,
 ** Core
 */
 
-int				ft_printf(const char *format, ...);
+int				ft_printf(const char *restrict format, ...);
 
 int				pf_parse_format(const char *str, va_list list);
 int				pf_transform(t_pf_param param, va_list list);

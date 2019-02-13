@@ -6,7 +6,7 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 18:14:47 by pscott            #+#    #+#             */
-/*   Updated: 2019/02/12 13:54:22 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/13 10:53:24 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ int						void_char_test(int len, void (*f)(char), char input);
 int						void_str_test(int len, void (*f)(const char*),char *input);
 
 int						void_itoa_test(int len, void (*f)(int), int input, char *output);
-
-int						void_printf_test(int (*f)(const char *restrict, ...), const char *restrict format, ...);
 
 void					print_test(char *name);
 
