@@ -1,2 +1,7 @@
-conversions;int;int42;"Hello the int is: %d", 42
-conversions;int;twoint;"Hello %d the int is: %d", 42, 21
+conversions;int;Int_42;"Hello the int is: %d", 42
+conversions;int;Two_int;"Hello %d the int is: %d", 42, 21
+conversions;double;pG;"Hello %G the int is: %G", 42, 21
+flags;int;One_hash;"Hello %#0d the int is: %d", 42, 21
+flags;int;Re_test;"Hello %#0d", 42
+unicode;char;Asksegv;"Hello %#0c", "42"
+unicode;str;Asksegv;"Hellowewefwefwefwefwefwe %#0c", "wefwfwef"

@@ -36,10 +36,6 @@ if [ ! -d ./$printf_tests_repo ]
 then
 	mkdir "./$printf_tests_repo"
 fi
-if [ ! -d ./../rendu ]
-then
-	mkdir "./../rendu"
-fi
 declare Makefile=./$printf_tests_repo"Makefile"
 if [ ! -f ./$Makefile ]
 then
