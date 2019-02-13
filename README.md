@@ -38,7 +38,7 @@ The framework is linked to a script building test tree and all .c, .o, .h, repos
 | ----------- | ----- | --------- | ----------- |
 | conversions |  int  | inifinity | "%ls", L'∞' |
 
-- `Arguments` is what will be placed inside the printf(HERE);
+- `Arguments` is what will be placed inside the printf(HERE); e.g. printf("%ls", L'∞');
 
 - Input example:
 
