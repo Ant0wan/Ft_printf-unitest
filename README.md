@@ -4,6 +4,8 @@ This micro-framework is a fork of Libunit [a 42 project] - a C Programming Langu
 
 The framework is linked to a script building test tree and all .c, .o, .h, repositories and makefile needed to perform the test of the printf like function project - necessarily a version of ft_printf/printf like function source code.
 
+[![header](https://i.imgur.com/CkiN5q7.png)](i.imgur.com/CkiN5q7.png)
+
 ---
 
 ## Description
@@ -23,7 +25,9 @@ wchar.h
 
 - The symbolic link `start.sh` launch the script `set_tests.sh` in the `./test_to_be_added/` repository. The script builds the tests and its tree based on the input in file './test_to_be_added/test_to_be_added`. After building files and repositories, the script launch the `test` makefile dependency and launches the tests.
 
-- `clean` argument can be given to `start.sh` to execute script with a clean option. the clean option deleted all routines and its root repository. It also put all files in `./test_to_be_added/` to their default value.
+- `clean` argument can be given to `start.sh` to execute script with a clean option. The clean option deleted all routines and its root repository. It also put all files in `./test_to_be_added/` to their default value.
+
+- `./clean.sh` runs `./start.sh clean`. Details about clean argument above.
 
 - The symbolic link `write_your_tests.txt` allows acces to the `tests.txt` file in in the `./test_to_be_added/` repository. It contains all tests applied to the printf like project. It follow the syntax:
 
@@ -159,6 +163,11 @@ by
 
 ```shell=
 ./start.sh
+```
+
+- To clean the repository and set it to default state, run clean.sh
+```shell=
+./clean.sh
 ```
 
 - Check output !
