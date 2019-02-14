@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 16:55:38 by abarthel          #+#    #+#              #
-#    Updated: 2019/02/11 11:48:57 by abarthel         ###   ########.fr        #
+#    Updated: 2019/02/14 13:04:12 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FRAMEWORK_PATH	=	.
 
 INCLUDES		=	-I $(FRAMEWORK_PATH)
 
-SRC				=	framework.c format.c processes.c init.c void_function_tests.c libtools.c
+SRC				=	framework.c format.c processes.c init.c libtools.c
 
 SRCS			=	$(addprefix $(FRAMEWORK_PATH)/, $(SRC))
 
