@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/02/13 15:10:32 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/02/14 13:08:56 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		TYPE_NAME(void)
 	{
 		close(1);
 		dup2(fd[1], 1);
+		dup2(2, 1); // TESTS
 		ret = ft_printf(ARG_TEST);
 		write(ret_fd[1], &ret, sizeof(int));
 		return (0);
