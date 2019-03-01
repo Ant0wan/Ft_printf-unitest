@@ -71,8 +71,9 @@ do
 	for i in $TYPE
 	do
 		digit="$(printf %02d $(echo "$index+1" | bc))"
-		ARG="$(cat $TEST_FILE | grep $dir';' | grep ${type[index]}';' | grep ${name[index]}';' | cut -d ";" -f4)"
-		sed "s/XXX/$ARG/g" XX_TYPE_NAME.c | sed "s/XX/$digit/g" | sed "s/TYPE/${type[index]}/g" | sed "s/NAME/${name[index]}/g" > $digit""_${type[index]}""_${name[index]}.c
+		export ARG="$(cat $TEST_FILE | grep $dir';' | grep ${type[index]}';' | grep ${name[index]}';' | cut -d ";" -f 4-)"
+		perl -p -e 's/XXX/$ENV{ARG}/g' XX_TYPE_NAME.c | sed "s/XX/$digit/g" | sed "s/TYPE/${type[index]}/g" | sed "s/NAME/${name[index]}/g" > $digit""_${type[index]}""_${name[index]}.c
+	#	sed "s/XXX/$ARG/g" XX_TYPE_NAME.c | sed "s/XX/$digit/g" | sed "s/TYPE/${type[index]}/g" | sed "s/NAME/${name[index]}/g" > $digit""_${type[index]}""_${name[index]}.c
 		mv $digit""_${type[index]}""_${name[index]}.c "$printf_tests_repo$dir"
 		sed -e '/LOAD TESTS/a\'$'\n'"\	load_test(&${type[index]}_${name[index]}, &testlist, \"${type[index]}_${name[index]}\", 0);" 00_$dir""_launcher.c > 00_$dir""_launcher.bak && cp -f 00_$dir""_launcher.bak 00_$dir""_launcher.c && rm 00_$dir""_launcher.bak
 		sed -e '/PROTOTYPES/a\'$'\n'"int\	${type[index]}_${name[index]}(void);" $dir.h > $dir.bakh && cp -f $dir.bakh $dir.h && rm $dir.bakh

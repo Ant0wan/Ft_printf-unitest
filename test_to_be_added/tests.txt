@@ -1,1 +1,2 @@
-conversions;int;ft;"The answer is: %d", 42
+strings;easy;arg2fmt;"%s / $ ?:;  !", "Hello World"
+strings;easy;argfmt;"%s", "Hello World"
