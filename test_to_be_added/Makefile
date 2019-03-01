@@ -6,12 +6,13 @@
 #    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 18:02:03 by pscott            #+#    #+#              #
-#    Updated: 2019/02/12 14:11:01 by abarthel         ###   ########.fr        #
+#    Updated: 2019/03/01 12:19:45 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libunit_test
-FLAGS = -Werror -Wall -Wextra
+FLAGS = 
+#FLAGS = -Werror -Wall -Wextra
 
 FRAMEWORK_PATH = ../framework
 
@@ -36,13 +37,13 @@ $(NAME): $(OBJS)
 	@printf "\e[38;5;51mFt\e[38;5;50m_\e[38;5;49mpr\e[38;5;48min\e[38;5;47mtf\e[38;5;46m te\e[38;5;47mst\e[38;5;48ms r\e[38;5;49mea\e[38;5;50mdy\e[0m\n"
 
 test: $(NAME)
-#	@gcc $(INCLUDES) $(LIB_UNIT) $(LIB_RENDU) -o $(NAME) $(OBJS)
-	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_RENDU) -o $(NAME) $(OBJS)
+#	@gcc -w $(INCLUDES) $(LIB_UNIT) $(LIB_RENDU) -o $(NAME) $(OBJS)
+	@gcc -w $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_RENDU) -o $(NAME) $(OBJS)
 	@./$(NAME) || true
 
 %.o: %.c
-#	@gcc $(FLAGS) $(INCLUDES) -o $@ -c $<
-	@gcc $(INCLUDES) -o $@ -c $<
+#	@gcc -w $(FLAGS) $(INCLUDES) -o $@ -c $<
+	@gcc -w $(INCLUDES) -o $@ -c $<
 
 clean:
 	@make -C $(RENDU_PATH) clean

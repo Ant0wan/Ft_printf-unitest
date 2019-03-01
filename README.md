@@ -43,8 +43,6 @@ wchar.h
 unicode;chr;infinity;"%ls", L'∞'
 ```
 
-- Some characters are not compatible with the framework: `/` and `\`. It is due to sed substitues not properly secured in `set_tests.sh`.
-
 - Tests can be added to tests.txt folling the above-mentionned format, e.g.
 
 ```shell=
