@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:38:05 by abarthel          #+#    #+#             */
-/*   Updated: 2019/03/01 11:52:28 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/03/01 12:48:10 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <unistd.h>
 
-#define TIMEOUT 8
+#define TIMEOUT 2
 
 int		process_launch(int (*f)(void))
 {
