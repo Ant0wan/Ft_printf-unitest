@@ -23,8 +23,6 @@ int	main(void)
 	init_info(info);
 	print_header();
 /* FUNCTIONS CALL */
-	strings_launcher(info);
-	format_launcher(info);
 	print_score(info->err, info->total);
 	ret = info->err ? -1 : 0;
 	if (info)

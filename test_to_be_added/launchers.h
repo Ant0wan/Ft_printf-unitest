@@ -16,7 +16,5 @@
 # include "libunit.h"
 
 /* PROTOTYPES */
-void  strings_launcher(t_err_info *info);
-void  format_launcher(t_err_info *info);
 
 #endif
