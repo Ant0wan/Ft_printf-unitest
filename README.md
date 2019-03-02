@@ -86,7 +86,7 @@ Results follow the format:
 
 Screenshot:
 
-[![ftprintftest](https://i.imgur.com/)](i.imgur.com/)
+[![ftprintftestResults](https://i.imgur.com/Gsk2tb9.png)](i.imgur.com/Gsk2tb9.png)
 
 ### Test routines
 
