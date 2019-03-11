@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/03/01 11:18:28 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/03/11 11:32:29 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <strings.h>
+#include <limits.h>
 
-#define BUFF 1024
+#define BUFF 8192
 #define ARG_TEST XXX
 
 int		TYPE_NAME(void)
