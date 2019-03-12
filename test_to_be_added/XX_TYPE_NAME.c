@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 18:01:48 by abarthel          #+#    #+#             */
-/*   Updated: 2019/03/11 11:32:29 by abarthel         ###   ########.fr       */
+/*   Updated: 2019/03/12 18:41:25 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <strings.h>
 #include <limits.h>
+#include <locale.h>
 
 #define BUFF 8192
 #define ARG_TEST XXX
@@ -31,6 +32,7 @@ int		TYPE_NAME(void)
 	int		ret;
 	int		ret2;
 
+	setlocale(LC_ALL, "");
 	buffer = strnew(BUFF);
 	buffer2 = strnew(BUFF);
 	stat = 0;

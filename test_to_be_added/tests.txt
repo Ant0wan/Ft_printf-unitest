@@ -48,10 +48,37 @@ strings;width;insane;"%80000000s!", "World "
 strings;width;overfl;"%2147483649s!", "World "
 strings;width;limit;"%2147483647s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
 strings;width;limin;"%-2147483647s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
-strings;width;negovfl;"%-2147483649s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
+strings;width;negfl;"%-2147483649s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
 dollars;int;intnor;"Dollars test %1$d %2$d %3$d %4$d", INT_MAX + 2, INT_MAX + 1, 42, -15
 dollars;int;intrev;"Dollars test %4$d %3$d %2$d %1$d", INT_MAX + 2, INT_MAX + 1, 42, -1515151515
 dollars;int;arev;"Dollars test %4$d %3$d %1$d %2$d", INT_MAX + 2, INT_MAX + 1, 42, -15
 dollars;str;cctry;"%2$s%1$s%3$s", "World", "Hello ", "!"
 dollars;str;nclass;"%1$s%3$s %2$s", "World", "Hello ", "!"
 dollars;str;nccl;"%1$s%3$s %2$s%10s", "World", "Hello ", "!", "Hello ","Hello ","Hello ","Hello ","Hello ","Hello ","Hello ","Hello "
+strings;prec;test010;"%2$10.2s%1$s%3$s", "World", "Hello ", "!"
+dollars;prec;test008;"normal test %1$-100.42d %2$d %3$d %4$5d", 1548, INT_MAX + 1, 42, 0
+dollars;prec;test007;"normal test %1$+100.42d %2$d %3$d %4$5d", 1548, INT_MAX + 1, 42, 0
+dollars;prec;test006;"%1$1.42d%2$d%3$.0d%4$5d", -1548, INT_MAX + 1, 42, 0
+dollars;prec;test005;"0 test %1$1.42d %2$.0d %3$d %4$5d", -0, 0 , 0, 0
+integer;preci;testo;"normal test %-100.42d %d %d %5d", 1548, INT_MAX + 1, 42, 0
+integer;prec;t003;"normal test %+100.42d %d %d %5d", 1548, INT_MAX + 1, 42, 0
+integer;prec;t002;"%1.42d%d%.0d%5d", -1548, INT_MAX + 1, 42, 0
+integer;prec;t00a;"0 test %1.42d %.0d %d %5d", -0, 0 , 0, 0
+integer;prec;ovfli;"overflow on prec test %-100.2147483649d %d %d %5d", 1548, INT_MAX + 1, 42, 0
+dollars;prec;ovfld;"overflow on prec test %1$-100.2147483649d %2$d %3$d %4$5d", 1548, INT_MAX + 1, 42, 0
+integer;plus;tts01;"0 test %+1.42d %+.0d %+d %+5d", -0, 0 , 0, 0
+integer;plus;tts02;"0 test %+-1.42d %+-.0d %+-d %+-5d", -0, 0 , 0, 0
+dollars;plus;tts03;"%1$+1.42d%2$+d%3$+.0d%4$+5d", -1548, INT_MAX + 1, 42, 0
+integer;plus;tts04;"normal test %+-100.42d %d %d %5d", 1548, INT_MAX + 1, 42, 0
+integer;prec;0101;"normal test %+-100.42d %d %d %5d", 1548, INT_MAX + 1, 42, 0
+integer;prec;0102;"2nd 0width test %+-.0d %.0d %.10d %5.3d", 1548, INT_MAX + 1, 42, 0
+integer;prec;0103;"2nd 0width test %+-.0d %.0d %.1d %5.3d", 1548, INT_MAX + 1, 42, 0
+integer;space;0104;"space test%+'d %+-d% d %d", 1548, INT_MAX + 1, 42, 0
+integer;prec;0105;"0width test%+d %.0d %d %d", 1548, INT_MAX + 1, 42, 0
+integer;apost;0106;"normal test %1$'+0.42d %2$'d %3$'d %4$'5d", 1548, INT_MAX + 1, 42, 0
+integer;apost;0107;"%1$'+1.42d%2$'+d%3$'+.0d%4$'+5d", -1548, INT_MAX + 1, 42, 0
+integer;apost;0108;"%1$'1.0d%2$'d%3$'.0d%4$'0.0d", -1548, INT_MAX + 1, 42, 0
+integer;apost;0109;"0 test %1$'1.42d %2$'.0d %3$'d %4$'5d", -0, 0 , 0, 0
+integer;apost;0110;"0 test %'+-1.42d %'+-.0d %'+-d %'+-5d", -0, 0 , 0, 0
+integer;apost;0111;"0 test %'+1.42d %'+.0d %'+d %'+5d", -0, 0 , 0, 0
+integer;apost;0112;"0 test %'1.42d %'.0d %'d %'5d", -0, 0 , 0, 0
