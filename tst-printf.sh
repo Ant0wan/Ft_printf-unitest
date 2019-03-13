@@ -232,3 +232,59 @@ cmp - ${common_objpfx}stdio-common/tst-printf.out > /dev/null 2>&1 ||
 }
 
 exit $status
+
+
+
+
+###### INSANE TESTS FOR FT_PRINTF ##############
+#
+#
+# unicode;wchar;segv;"Hello %ls!%s%s", (wchar_t*)300, "Damn", "okay"
+# strings;width;limin;"%-2147483647s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
+# strings;width;limit;"%2147483647s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
+# strings;width;insane;"%80000000s!", "World "
+# strings;width;outchb;"%800000s!", "World "
+# format;easy;spper;"%    %"
+# strings;width;outcha;"%80000s!", "World "
+# strings;width;outchb;"%800000s!", "World "
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+

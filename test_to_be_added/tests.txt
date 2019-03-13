@@ -11,7 +11,6 @@ format;easy;star;"*"
 format;easy;flag;"l"
 format;easy;flagp;" %l"
 format;easy;bracket;"[% ]"
-format;easy;spper;"%    %"
 strings;easy;spaces;"%     s", "Hello"
 strings;prec;canyou;"%.12s", "Hello"
 strings;width;prectw;"%.12s", "Hello"
@@ -32,7 +31,6 @@ unicode;utf8;china;"Hello %S!%S%S", L"电脑是新的", L",电脑死机了。", 
 unicode;limit;china;"Hello %ls!%ls%ls", L"电脑是新的", L",电脑死机了。", L"电脑坏了。😢 "
 unicode;unic;canret;"Hello %ls!%s%s", L"😄", "Damn", "okay"
 strings;break;buff;"%s", "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr..................................................+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++///////////////////////////////////////////////////////////////////////////////?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjpppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppPPBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrRRRRRRRRRRRRRrrrrrrrrrrrrrrRRRRRRRrrrrRRRRrrrrrRRrrrRrrrrrrrrrrRRrrrRRrrrRRrrrrrrrrrRRrrrrrrrrRRRrrrrrrrrrrrrrrRRrrrRRrrrrrrrrrrrRRrrrrRRrrrrrrrrrrrrrrrrrrrrrRRRrrrRRRrrrrrrrrrrrrrrrrrrrRRRrrrrrrrrrrrrrrrrrrrrrRRrrrrRRRrrrrrrrrrrrrrrrrrrrrrrRRrrrrrrrrrrrrrrrrrrrrrRRrrrRRRrrrrrrrrrrrrrrrrrrrrRRRrrrrrrrrrrrrrrrrrrrrrrRRRrrrRRRrrrrrrrrrrrrrrrrrrrRRrrrrrrrrrrrrrrrrrrrrrRRrrrRRRrrrrrrrrrrrrrrrrrrRRRRrrrrrrrrrrrrrrrrrrrrrRRRrrrRRrrrrrrrrrrrrrrrrrrrRRRRRrrrrrrrrrrrrrrrrrrrrrrRRrrrrRRrrrrrrrrrrrrrrrrrRRRRrrrrrrrrrrrrrrrrrrrrrrRRRrrrRRRrrrrrrrrrrrrrrrrrrRRRRrrrrrrrrrrrrrrrrrrrrrRRRrrrrRRrrrrrrrrrrrrrrrrrRRrrrrrrrrrrrrrrrrrrrrrrrrRRrrrRRRrrrrrrrrrrrrrrrrrrrRRrrrrrrrrrrrrrrrrrrrrrrrrrRRrrrrRRRRrrrrrrrrrrrrrrrrrrRRRrrrrrrrrrrrrrrrrrrrrrrrrRRrrrRRrrrrrrrrrrrrrrrrrrrRRRrrrrrrrrrrrrrrrrrrrrrrrrrrRRrrrRRrrrrrrrrrrrrrRRrrrrrrrrrrrrrrrrrrrrrrrrrrrrRRrrrrRRrrrrrrrrrrrrrrRRRrrrrrrrrrrrrrrrrrrrrrrrrrrrrrRRrrrrRRrrrrrrrrrrrrrRRRrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrRrrrrrRRrrrrrrrrrrrrrRRRrrrrrrr111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444=========================================================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,<<<<<<<<<<<<<<<<<<<,,,,,,,,,,<<<<<,,,,,,<<<,,,<,,,,<,,,,<,,,,,,,,,<,,,,<,,,,,,,,,.>>...>....>>...>...>>...>...>>...>>...>...>>...>>...>....>...;;;;:;;;;:;;;::;;;::;;;::;;;:;;;::;;;:;;;::;;;;:;;;;;;;;::;;;:;;;;:;;;;:;;;::;;;::;;;:::;;::;;;::;;;::;;;;:;;;;:{[[{{[[{{[[[{[[[[{[[[[{[[[[{[[[[{[[[{{[[[{{[[[]]]]]}]]]]}]]"
-unicode;wchar;segv;"Hello %ls!%s%s", (wchar_t*)300, "Damn", "okay"
 unicode;wchar;maxn;"Hello %ls!%s%s", L"\x100", "Damn", "okay"
 unicode;wchar;maxo;"Hello %ls!%s%s", L"\x160", "Damn", "okay"
 unicode;wchar;maxl;"Hello %ls!%s%s", L"\x0FF", "Damn", "okay"
@@ -42,12 +40,7 @@ unicode;wchar;tild;"Hello %ls!%s%s", L"~", "Damn", "okay"
 unicode;wchar;twows;"Hello %ls!%ls%s", L"~", L"Damnijefihwfiwhf~", "okay"
 unicode;wchar;brkws;"Hello %ls!%ls%s", L"~", L"Damn\x100ijefihwfiwhf~", "okay"
 strings;width;outch;"Hello %8000s!", "World "
-strings;width;outcha;"%80000s!", "World "
-strings;width;outchb;"%800000s!", "World "
-strings;width;insane;"%80000000s!", "World "
 strings;width;overfl;"%2147483649s!", "World "
-strings;width;limit;"%2147483647s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
-strings;width;limin;"%-2147483647s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
 strings;width;negfl;"%-2147483649s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
 dollars;int;intnor;"Dollars test %1$d %2$d %3$d %4$d", INT_MAX + 2, INT_MAX + 1, 42, -15
 dollars;int;intrev;"Dollars test %4$d %3$d %2$d %1$d", INT_MAX + 2, INT_MAX + 1, 42, -1515151515
@@ -82,3 +75,27 @@ integer;apost;0109;"0 test %1$'1.42d %2$'.0d %3$'d %4$'5d", -0, 0 , 0, 0
 integer;apost;0110;"0 test %'+-1.42d %'+-.0d %'+-d %'+-5d", -0, 0 , 0, 0
 integer;apost;0111;"0 test %'+1.42d %'+.0d %'+d %'+5d", -0, 0 , 0, 0
 integer;apost;0112;"0 test %'1.42d %'.0d %'d %'5d", -0, 0 , 0, 0
+integer;zeros;zer01;"0 test %+01.42d %0+.0d %0+d %0+5d", -0, 0 , 0, 0
+dollars;zeros;zer02;"Dollars test %4$d %3$010d %2$d %1$d", INT_MAX + 2, INT_MAX + 1, 42, -1515151515
+dollars;zeros;zer03;">>Dollars test %4$040d %3$d %1$d %2$+d", INT_MAX + 2, INT_MAX + 1, 42, -15
+integer;zeros;zer04;">>Dollars test %040d %d %d %+d", INT_MAX + 2, INT_MAX + 1, 42, -15
+dollars;zeros;zer05;"posDoll test %4$+040hd %3$d %1$d %2$+d", INT_MAX + 2, INT_MAX + 1, 42, (short)12
+integer;zeros;zer06;"posDoll test %+040hd %d %1$d %+d", INT_MAX + 2, INT_MAX + 1, 42, (short)12
+integer;fmt;ftest01;"0>>Dollars test %040d %d %.0d %+d", -15, 42, -0, 0
+integer;fmt;ftest02;"1>>Dollars test %40d %d %+d %+d", -15, 42, 0, -0
+integer;fmt;ftest03;"2>>Dollars test %+40d %d %+d %+d", 15, 42, 0, -0
+integer;fmt;ftest04;"3>>Dollars test %+40d %d %d %+d", 15, 42, 0, -0
+integer;fmt;ftest05;"4>>Dollars test %0+40d %d %d %+d", 15, 42, 0, -0
+integer;fmt;ftest06;"5>>Dollars test %0+.40d %d %d %+d", 15, 42, 0, -0
+integer;fmt;ftest07;"6>>Dollars test %0+.40d %d %d %+d", -15, 42, 0, -0
+integer;fmt;ftest08;"7>>Dollars test %.40d %d %+4.2d %+d", 15, 42, 0, -0
+integer;fmt;ftest09;"8>>Dollars test %20.4d %d %4.2d %+d", 15, 42, 0, -0
+integer;fmt;ftest10;"9>>Dollars test %020.4d %d %+0.0d %+d", 15, 42, 0, -0
+integer;fmt;ftest11;"0>>Dollars test %+020.4d %d %d %+d", 15, 42, 0, -0
+integer;fmt;ftest12;"1>>Dollars test %+020.4d %d %0.0d %+d", -15, 42, 0, -0
+integer;fmt;ftest13;"2>>Dollars test %+-20.4d %d %0.0d %+d", 15, 42, -0, -0
+integer;fmt;ftest14;"3>>Dollars test %+-20.4d %d %+0.0d %+d", -15, 42, 0, -0
+integer;fmt;ftest15;"4>>Dollars test %+-20.d %d %+0.0d %+d", -15, 42, 0, -0
+integer;fmt;ftest16;"5>>Dollars test %+-.d %d %+0.0d %+d", -15, 42, 0, -0
+integer;fmt;ftest17;"6>>Dollars test %+0.d %d %+0.0d %+d", -15, 42, 0, -0
+integer;fmt;ftest18;"7>>Dollars test %+.0d %d %+0.0d %+d", -15, 42, 0, -0
