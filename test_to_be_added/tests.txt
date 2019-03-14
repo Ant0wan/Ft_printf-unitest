@@ -16,9 +16,11 @@ strings;prec;canyou;"%.12s", "Hello"
 strings;width;prectw;"%.12s", "Hello"
 strings;wdpr;dosdos;"%12.12s", "*Hello"
 strings;width;large;"%1200s", ".Hello"
-strings;prec;limit;"%.2147483648s", "Hello dude \n"
-strings;width;abuse;"%2147483649s", "Hoho"
-strings;prec;abuse;"%.2147483649s", "Hello"
+strings;prec;limit;"%.4294967394s", "Hello dude \n"
+strings;width;abuse;"%4294967394s", "Hoho"
+strings;prec;abuse;"%.4294967394s", "Hello"
+strings;prec;smally;"%.1s", "Hello"
+strings;prec;smallm;"%.-1s", "Hello"
 strings;multi;many;"%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s", "Hello", "lol", "HOHO", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKOE", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok"
 strings;multi;many2;"%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s%s %s %s %s %s %s %s %s %s", "Hello", "lol", "HOHO", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKOE", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok", "KOKO", "ok", "ok"
 format;op;sizeof;"sizeof(int)"
@@ -40,8 +42,8 @@ unicode;wchar;tild;"Hello %ls!%s%s", L"~", "Damn", "okay"
 unicode;wchar;twows;"Hello %ls!%ls%s", L"~", L"Damnijefihwfiwhf~", "okay"
 unicode;wchar;brkws;"Hello %ls!%ls%s", L"~", L"Damn\x100ijefihwfiwhf~", "okay"
 strings;width;outch;"Hello %8000s!", "World "
-strings;width;overfl;"%2147483649s!", "World "
-strings;width;negfl;"%-2147483649s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
+strings;width;overfl;"%4294967394s!", "World "
+strings;width;negfl;"%-4294967394s! checking what will happen when it goes far beyond the limit of an INTMAX", "World"
 dollars;int;intnor;"Dollars test %1$d %2$d %3$d %4$d", INT_MAX + 2, INT_MAX + 1, 42, -15
 dollars;int;intrev;"Dollars test %4$d %3$d %2$d %1$d", INT_MAX + 2, INT_MAX + 1, 42, -1515151515
 dollars;int;arev;"Dollars test %4$d %3$d %1$d %2$d", INT_MAX + 2, INT_MAX + 1, 42, -15
@@ -57,8 +59,8 @@ integer;preci;testo;"normal test %-100.42d %d %d %5d", 1548, INT_MAX + 1, 42, 0
 integer;prec;t003;"normal test %+100.42d %d %d %5d", 1548, INT_MAX + 1, 42, 0
 integer;prec;t002;"%1.42d%d%.0d%5d", -1548, INT_MAX + 1, 42, 0
 integer;prec;t00a;"0 test %1.42d %.0d %d %5d", -0, 0 , 0, 0
-integer;prec;ovfli;"overflow on prec test %-100.2147483649d %d %d %5d", 1548, INT_MAX + 1, 42, 0
-dollars;prec;ovfld;"overflow on prec test %1$-100.2147483649d %2$d %3$d %4$5d", 1548, INT_MAX + 1, 42, 0
+integer;prec;ovfli;"overflow on prec test %-100.4294967394d %d %d %5d", 1548, INT_MAX + 1, 42, 0
+dollars;prec;ovfld;"overflow on prec test %1$-100.4294967394d %2$d %3$d %4$5d", 1548, INT_MAX + 1, 42, 0
 integer;plus;tts01;"0 test %+1.42d %+.0d %+d %+5d", -0, 0 , 0, 0
 integer;plus;tts02;"0 test %+-1.42d %+-.0d %+-d %+-5d", -0, 0 , 0, 0
 dollars;plus;tts03;"%1$+1.42d%2$+d%3$+.0d%4$+5d", -1548, INT_MAX + 1, 42, 0
@@ -99,3 +101,75 @@ integer;fmt;ftest15;"4>>Dollars test %+-20.d %d %+0.0d %+d", -15, 42, 0, -0
 integer;fmt;ftest16;"5>>Dollars test %+-.d %d %+0.0d %+d", -15, 42, 0, -0
 integer;fmt;ftest17;"6>>Dollars test %+0.d %d %+0.0d %+d", -15, 42, 0, -0
 integer;fmt;ftest18;"7>>Dollars test %+.0d %d %+0.0d %+d", -15, 42, 0, -0
+integer;fmt;basic01;"|%d|\n", -15
+integer;fmt;basic02;"|%d|\n", 15
+integer;fmt;basic03;"|%0d|\n", -15
+integer;fmt;basic04;"|%0d|\n", 15
+integer;fmt;basic05;"|%+d|\n", -15
+integer;fmt;basic06;"|%+d|\n", 15
+integer;fmt;basic07;"|%40d|\n", -15
+integer;fmt;basic08;"|%40d|\n", 15
+integer;fmt;basic09;"|%.40d|\n", -15
+integer;fmt;basic10;"|%+.40d|\n", -15
+integer;fmt;basic11;"|%+.40d|\n", 15
+integer;fmt;basic12;"|%45.40d|\n", -15
+integer;fmt;basic13;"|%45.40d|\n", 15
+integer;fmt;basic14;"|%+45.40d|\n", -15
+integer;fmt;basic15;"|%+45.40d|\n", 15
+integer;fmt;basic16;"|%040d|\n", -15
+integer;fmt;basic17;"|%040d|\n", 15
+integer;fmt;basic18;"|%+040d|\n", -15
+integer;fmt;basic19;"|%+040d|\n", 15
+integer;fmt;basic20;"|%0.40d|\n", -15
+integer;fmt;basic21;"|%0.40d|\n", 15
+integer;fmt;basic22;"|%0d|\n", -15
+integer;fmt;basic23;"|%0d|\n", 15
+integer;fmt;basic24;"|%.0d|\n", -15
+integer;fmt;basic25;"|%+0.0d|\n", 0
+integer;fmt;basic26;"|%+0.0d|\n", 1
+integer;fmt;basic27;"|%+.0d|\n", 0
+integer;fmt;basic28;"|%+0d|\n", 0
+integer;fmt;basic29;"|%+d|\n", 0
+integer;fmt;basic30;"|%.0d|\n", 15
+integer;fmt;basic31;"|%+40d|\n", -15
+integer;fmt;basic32;"|%+40d|\n", 15
+integer;fmt;basic33;"|%40.0d|\n", -15
+integer;fmt;basic34;"|%40.0d|\n", 15
+integer;fmt;basic35;"|%+40.0d|\n", -15
+integer;fmt;basic36;"|%+40.0d|\n", 15
+integer;fmt;basic37;"|%+40.0d|\n", -15
+integer;fmt;basic38;"|%+40.0d|\n", 15
+integer;fmt;basic39;"|%-d|\n", -15
+integer;fmt;basic40;"|%-d|\n", 15
+integer;fmt;basic41;"|%-d|\n", -15
+integer;fmt;basic42;"|%-d|\n", 15
+integer;fmt;basic43;"|%+-d|\n", -15
+integer;fmt;basic44;"|%+-d|\n", 15
+integer;fmt;basic45;"|%-40d|\n", -15
+integer;fmt;basic46;"|%-40d|\n", 15
+integer;fmt;basic47;"|%-.40d|\n", -15
+integer;fmt;basic48;"|%-+.40d|\n", -15
+integer;fmt;basic49;"|%-+.40d|\n", 15
+integer;fmt;basic50;"|%-45.40d|\n", -15
+integer;fmt;basic51;"|%-45.40d|\n", 15
+integer;fmt;basic52;"|%-+45.40d|\n", -15
+integer;fmt;basic53;"|%-+45.40d|\n", 15
+integer;fmt;basic54;"|%-40d|\n", -15
+integer;fmt;basic55;"|%-40d|\n", 15
+integer;fmt;basic56;"|%-+40d|\n", -15
+integer;fmt;basic57;"|%-+40d|\n", 15
+integer;fmt;basic62;"|%-.0d|\n", -15
+integer;fmt;basic63;"|%+-.0d|\n", 0
+integer;fmt;basic64;"|%+-.0d|\n", 1
+integer;fmt;basic65;"|%-+.0d|\n", 0
+integer;fmt;basic66;"|%-+0d|\n", 0
+integer;fmt;basic67;"|%-+d|\n", 0
+integer;fmt;basic68;"|%-.0d|\n", 15
+integer;fmt;basic69;"|%-+40d|\n", -15
+integer;fmt;basic70;"|%-+40d|\n", 15
+integer;fmt;basic71;"|%-40.0d|\n", -15
+integer;fmt;basic72;"|%-40.0d|\n", 15
+integer;fmt;basic73;"|%-+40.0d|\n", -15
+integer;fmt;basic74;"|%-+40.100d|\n", 15
+integer;fmt;basic75;"|%-+40.100d|\n", -15
+integer;fmt;basic76;"|%-+40.0d|\n", 15

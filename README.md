@@ -172,4 +172,4 @@ by
 
 ### Demo
 
-[![ftprintfunitestdemo](https://i.imgur.com/)](i.imgur.com)
+[![ftprintfunitestdemo](https://i.imgur.com/G9irtBB.gif)](i.imgur.com/G9irtBB.gif)
