@@ -147,11 +147,13 @@ vim write_your_tests.txt
 
 - Add the path of your .h in the ./test_to_be_added/XX_TYPE_NAME.c file
 
-Replace the line 13
+- Replace the line 13
+
 ```shell=
 #include "../rendu/include/ft_printf.h" // to change with correct path
 ```
-by
+- by
+
 ```shell=
 #include "../rendu/[your include folder]/ft_printf.h"
 ```
