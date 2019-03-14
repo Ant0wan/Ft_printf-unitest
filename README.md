@@ -174,4 +174,4 @@ vim write_your_tests.txt
 
 ### Demo
 
-[![ftprintfunitestdemo](https://i.imgur.com/UVlEQDN.gif)](i.imgur.com/UVlEQDN.gif)
+[![ftprintfunitestdemo](https://i.imgur.com/X09O6MG.gif)](i.imgur.com/X09O6MG.gif)
