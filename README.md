@@ -1,5 +1,9 @@
 # Ft_printf-unitest [![42](https://i.imgur.com/9NXfcit.jpg)](i.imgur.com/9NXfcit.jpg)[![freetime](https://i.imgur.com/8IcDLkc.png)](i.imgur.com/8IcDLkc.png)
 
+[![HitCount](http://hits.dwyl.io/Ant0wan/Ft_printf-unitest.svg)](http://hits.dwyl.io/Ant0wan/Ft_printf-unitest)
+
+---
+
 This micro-framework is a fork of Libunit [a 42 project] - a C Programming Language Micro-framework dedicated to unit testings. The framework is able to execute series of tests on C functions - one after the other - without interruption. It has been made for testing Ft_printf [a 42 project].
 
 The framework is linked to a script building test tree and all .c, .o, .h, repositories and makefile needed to perform the test of the printf like function project - necessarily a version of ft_printf/printf like function source code.
